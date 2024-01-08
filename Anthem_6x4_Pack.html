@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100px, initial-scale=1.0">
+    <title>Anthem 6x4 Pack | Farm Mods TV</title>
+    <link rel="icon" href="FARM MODS TV.png" type="image/x-icon">
+    <style>
+        body {
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); /* Arka plan resmi belirtme */
+            background-size: cover; /* Resmi bölüm boyutuna sığacak şekilde ayarlama */
+            background-position: center; /* Resmi bölümün ortasına yerleştirme */
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 600px;
+            overflow: hidden;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background-color: #ff5700;
+        }
+        li {
+            float: left;
+            margin: 0;
+        }
+        ol {
+            float: right;
+            margin: 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
+        .markalama {
+            float: left;
+            margin: 0;
+        }
+        li:last-child {
+            border-right: none;
+            margin: 0;
+        }
+        li a {
+            display: block;
+            color: #2f2e2e;
+            text-align: center;
+            padding: 10px 15px;
+            text-decoration: none;
+            margin: 0;
+        }
+        li a:hover {
+
+            color: #ffffff;
+            margin: 0;
+        }
+        .kutular {
+            width: 35px;
+            height: 35px;
+            font-size: 25px;
+            background-color: #ffffff; /* Örnek bir renk */
+            margin: 5px; /* Kutular arasında boşluk bırakmak için */
+            display: block; /* Kutuların yan yana gelmesini sağlar */
+            color: #2f2e2e;
+            text-align: center;
+            border-radius: 25px;
+            cursor: pointer;
+            table-layout:auto;
+        }
+        .marka {
+            width: 200px;
+            height: 35px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            font-size: 25px;
+            padding: 0px 0px;
+            background-color: #ff5700; /* Örnek bir renk */
+            margin: 0px; /* Kutular arasında boşluk bırakmak için */
+            display: block; /* Kutuların yan yana gelmesini sağlar */
+            color: #2f2e2e;
+            text-align: center;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            cursor: pointer;
+        }
+        .kutularContainer {
+            display: flex;
+            float: right;
+            flex-direction: line; /* Kutuları yatay yönde konumlandır */
+            position: fixed;
+            bottom: 1px;
+            right: 1px;
+        }
+        .kutular:hover {
+            background-color: #ffffff; /* Fare üzerine gelindiğinde arka plan rengini değiştir */
+            color: #ffffff;
+            cursor: pointer;
+        }
+        .bolum {
+            padding: 300px;
+            background-color: #f1f1f1;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0);
+            background-size: cover; /* Resmi bölüm boyutuna sığacak şekilde ayarlama */
+            background-position: center; /* Resmi bölümün ortasına yerleştirme */
+        }
+        .telif {
+            position: fixed;
+            color: #ffffff;
+            bottom: 3px;
+            left: 3px;
+        }
+        .detayKutusu {
+            width: 550px;
+            height: 550px;
+            font-size: 25px;
+            background-color: #ff5700; /* Örnek bir renk */
+            margin: 5px; /* Kutular arasında boşluk bırakmak için */
+            display: block; /* Kutuların yan yana gelmesini sağlar */
+            color: #2f2e2e;
+            text-align: center;
+            border-radius: 25px;
+            table-layout:auto;
+            position: fixed;
+            top: 90px;
+            left: 30px;
+        }
+        .detayKutusuYazilari {
+            margin: 10px;
+            font-size: 20px;
+            text-align: left;
+        }
+        .detayResimi {
+            width: 444px;
+            height: 250px;
+            font-size: 25px;
+            background-color: #ff5700; /* Örnek bir renk */
+            margin: 5px; /* Kutular arasında boşluk bırakmak için */
+            display: block; /* Kutuların yan yana gelmesini sağlar */
+            color: #2f2e2e;
+            text-align: left;
+            border-radius: 25px;
+            table-layout: auto;
+        }
+        .detayResimiContainer {
+            display: flex;
+            float: right;
+            flex-direction: line; /* Kutuları yatay yönde konumlandır */
+            position: fixed;
+            top: 90px;
+            left: 620px;
+        }
+        .detayResimiContainer2 {
+            display: flex;
+            float: right;
+            flex-direction: line; /* Kutuları yatay yönde konumlandır */
+            position: fixed;
+            top: 385px;
+            left: 620px;
+        }
+        .detayKutusuYazilariModDetayButton {
+            width: 235px;
+            height: 30px;
+            display: flex;
+            cursor: pointer;
+            float: center;
+            text-align: center;
+            position: fixed;
+            top: 600px;
+            left: 200px;
+        }
+        .detayKutusuYazilariModDetayButton:hover {
+            display: flex;
+            cursor: pointer;
+            text-align: center;
+            float: center;
+            flex-direction: line; /* Kutuları yatay yönde konumlandır */
+            color: #ffffff;
+            border: #2f2e2e solid;
+            border-spacing: 5px;
+            border-radius: 25px;
+            position: fixed;
+            top: 600px;
+            left: 200px;
+        }
+    </style>
+    <script>
+        function instagram() {
+            window.open('https://www.instagram.com/farmmodstv/', '_self');
+        }
+        function facebook() {
+            window.open('https://www.facebook.com/farmmodstv/', '_self');
+        }
+        function youtube() {
+            window.open('https://www.youtube.com/channel/UCZH3Gg1BfzzAwvSLj7ehGKw', '_self');
+        }
+        function home() {
+            window.open('anaSayfa.html', '_self');
+        }
+        function modDetay() {
+            window.open('modStatesList.html', '_self');
+        }
+    </script>
+</head>
+<body>
+    <ol>
+        <ul>
+            <li><a href="anaSayfa.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="yakinda.html">About</a></li>
+            <li><a href="yakinda.html">Contact</a></li>
+            <li><a href="modStatesList.html">Mod States List</a></li>
+            <li><a href="bugRepairList.html">Bug Repair List</a></li>
+        </ul>
+    </ol>
+    <div class="marka" onclick="home()">Farm Mods TV</div>
+    <div class="bolum">
+        <div class="detayKutusu">
+            <h1>Anthem 6x4 Pack</h1>
+            <p class="detayKutusuYazilari">Project Type: Farming Simulator Mod</p>
+            <p class="detayKutusuYazilari">Create Date: 07.01.2024</p>
+            <p class="detayKutusuYazilari">Estimated Publish Date: January 2024</p>
+            <p class="detayKutusuYazilari">Project Description</p>
+            <div class="detayKutusuYazilariModDetayButton" onclick="modDetay()" style="position: fixed; top: 600px; left: 200px; color: #2e2f2f; font-size: 30px; font-family: Inter; font-weight: 300; word-wrap: break-word;">Check Mod States</div>
+        </div>
+        <div class="detayResimiContainer">
+            <img class="detayResimi" src="screenshot4.jpg">
+            <img class="detayResimi" src="screenshot2.jpg">
+        </div>
+        <div class="detayResimiContainer2">
+            <img class="detayResimi" src="screenshot1.jpg">
+            <img class="detayResimi" src="screenshot.jpg">
+        </div>
+    </div>
+    <footer>
+        <div class="telif">
+            &copy; Farm Mods TV, Official Website
+        </div>
+        
+        <div class="kutularContainer">
+            <div class="kutular" onclick="facebook()"><img src="facebook.png" alt="Açıklama metni" width="35px" height="35px"></div>
+            <div class="kutular" onclick="instagram()"><img src="instagram.png" alt="Açıklama metni" width="35px" height="35px"></div>            
+            <div class="kutular" onclick="youtube()"><img src="youtube.png" alt="Açıklama metni" width="35px" height="35px"></div>
+        </div>
+    </footer>
+</body>
+</html>
