@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=100px, initial-scale=1.0">
-    <title id="page-title">Home | Farm Mods TV</title>
+    <title>Home | Farm Mods TV</title>
     <link rel="icon" href="FARM MODS TV.png" type="image/x-icon">
     <style>
         body {
-            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); /* Arka plan resmi belirtme */
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('FARM MODS TV (1).png'); /* Arka plan resmi belirtme */
             background-size: cover; /* Resmi bölüm boyutuna sığacak şekilde ayarlama */
             background-position: center; /* Resmi bölümün ortasına yerleştirme */
-            overflow: hidden; /* Sayfanın taşma durumunda kaydırma çubuğunu gizle */            
         }
         ul {
             list-style-type: none;
@@ -50,6 +49,7 @@
             margin: 0;
         }
         li a:hover {
+
             color: #ffffff;
             margin: 0;
         }
@@ -106,44 +106,8 @@
         }
         .telif {
             position: fixed;
-            color: #ffffff;
             bottom: 3px;
             left: 3px;
-        }
-        .slideshow-container {
-            width: 800px;
-            height: 576px;
-            position: relative;
-            top: 60px;
-            left: 25px;
-        }
-        .video {
-            position: relative;
-            float: inline-end;
-        }
-        .mySlides {
-            display: none;
-            cursor: pointer;
-        }
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 20px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-        }
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-        .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
         }
     </style>
     <script>
@@ -159,89 +123,28 @@
         function home() {
             window.open('anaSayfa.html', '_self');
         }
-        document.addEventListener('visibilitychange', function() {
-            var pageTitle = document.getElementById('page-title');
-
-            if (document.visibilityState === 'visible') {
-                pageTitle.textContent = 'Home | Farm Mods TV';
-            } else {
-                setTimeout(function() {
-                pageTitle.textContent = "I'm here, Don't Forget Me!!!"; }, 100,);
-            }
-        });
-        let slideIndex = 0;
-        showSlides();
-    
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-        function showSlides() {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-    
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-    
-            if (slideIndex >= slides.length) {
-                slideIndex = 0;
-            }
-    
-            if (slideIndex < 0) {
-                slideIndex = slides.length - 1;
-            }
-    
-            slides[slideIndex].style.display = "block";
-        }
     </script>
 </head>
 <body>
-    <div style="width: 100%; height: 100%; padding-bottom: 947px; background: white; justify-content: center; align-items: center; display: inline-flex">
-        <div style="width: 1980px; height: 77px; position: relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-            <div style="width: 278px; height: 52px; color: #FF5700; font-size: 30px; font-family: Inknut Antiqua; font-weight: 400; word-wrap: break-word">FARM MODS TV</div>
-            <div style="color: #FF5700; font-size: 15px; font-family: Inknut Antiqua; font-weight: 400; word-wrap: break-word">MOD STATES LIST</div>
-            <div style="color: #FF5700; font-size: 15px; font-family: Inknut Antiqua; font-weight: 400; word-wrap: break-word">BUG REPAIR LIST</div>
-            <div style="color: #FF5700; font-size: 15px; font-family: Inknut Antiqua; font-weight: 400; word-wrap: break-word">CONTACT</div>
-            <div style="color: #FF5700; font-size: 15px; font-family: Inknut Antiqua; font-weight: 400; word-wrap: break-word">PROJECTS</div>
-        </div>
-    </div>
     <ol>
         <ul>
             <li><a href="anaSayfa.html">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
-            <li><a href="projesayfas_.html">About</a></li>
-            <li><a href="yakinda.html">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
             <li><a href="modStatesList.html">Mod States List</a></li>
             <li><a href="bugRepairList.html">Bug Repair List</a></li>
         </ul>
     </ol>
     <div class="marka" onclick="home()">Farm Mods TV</div>
-    <div class="slideshow-container">
-        <div class="mySlides">
-            <a href="yakinda.html">
-                <img src="screenshot.jpg" style="width:100%">
-            </a> 
-        </div>
-        <div class="mySlides">
-            <a href="yakinda.html">
-                <img src="screenshot2.jpg" style="width:100%">
-            </a> 
-        </div>
-        <div class="mySlides">
-            <a href="Anthem_6x4_Pack.html">
-                <img src="screenshot4.jpg" style="width:100%">
-            </a> 
-        </div>
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    <div class="video">
-        <iframe width="500" height="576" src="https://www.youtube.com/embed/dcd061H2DPw?list=PLxFmJNPURyEuaNdMEwAcf0HHM8-PuEOOf&autoplay=1" title="FS22 Mods - 2017 Police Pickup v2.8 - PC/CONSOLE" frameborder="0" allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="bolum">
+        
     </div>
     <footer>
         <div class="telif">
             &copy; Farm Mods TV, Official Website
         </div>
+        
         <div class="kutularContainer">
             <div class="kutular" onclick="facebook()"><img src="facebook.png" alt="Açıklama metni" width="35px" height="35px"></div>
             <div class="kutular" onclick="instagram()"><img src="instagram.png" alt="Açıklama metni" width="35px" height="35px"></div>            
