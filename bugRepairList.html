@@ -11,11 +11,14 @@
             background-size: cover; /* Resmi bölüm boyutuna sığacak şekilde ayarlama */
             background-position: center; /* Resmi bölümün ortasına yerleştirme */
         }
+        .buSayfa {
+            color: #ffffff;
+        }
         ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
-            width: 600px;
+            width: 500px;
             overflow: hidden;
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
@@ -140,12 +143,11 @@
 <body>
     <ol>
         <ul>
-            <li><a href="anaSayfa.html">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="yakinda.html">About</a></li>
             <li><a href="yakinda.html">Contact</a></li>
             <li><a href="modStatesList.html">Mod States List</a></li>
-            <li><a href="bugRepairList.html">Bug Repair List</a></li>
+            <li><a href="bugRepairList.html" class="buSayfa">Bug Repair List</a></li>
         </ul>
     </ol>
     <div class="marka" onclick="home()">Farm Mods TV</div>
