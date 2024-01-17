@@ -13,11 +13,13 @@
         }
         ul {
             list-style-type: none;
-            margin-right: 93px;
+            margin-right: 50px;
             padding: 0;
-            width: 500px;
+            width: auto;
+            max-width: 500px;
             overflow: hidden;
             border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
             background-color: #ff5700;
         }
         li {
@@ -77,6 +79,7 @@
             display: block; /* Kutuların yan yana gelmesini sağlar */
             color: #2f2e2e;
             text-align: center;
+            margin-left: 50px;
             border-bottom-left-radius: 25px;
             border-bottom-right-radius: 25px;
             cursor: pointer;
@@ -106,23 +109,6 @@
             position: fixed;
             bottom: 3px;
             left: 3px;
-        }
-        .personal {
-            width: 90px;
-            font-size: 15px;
-            position: fixed;
-            top: 0px;
-            right: 0px;
-            border: #2f2e2e solid;
-            border-bottom-right-radius: 25px;
-            text-align: center;
-        }
-        .personal:hover {
-            color: #ffffff;
-            background-color: #2f2e2e;
-            cursor: pointer;
-            position: fixed;
-            top: 0px;
         }
     </style>
     <script>
@@ -154,9 +140,7 @@
         </ul>
     </ol>
     <div class="marka" onclick="home()">Farm Mods TV</div>
-    <div class="personal" onclick="personal()">Personal Website</div>
-    <div class="bolum">
-        
+    <div class="bolum">     
     </div>
     <footer>
         <div class="telif">
