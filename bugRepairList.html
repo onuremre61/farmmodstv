@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="All Known Bugs and Repair List of Farm Mods TV's Mods">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="page-title">Bug Repair | Farm Mods TV</title>
     <link rel="icon" href="genelFotolar/FARM MODS TV.png" type="image/x-icon">
@@ -148,33 +149,23 @@
             window.open('https://www.youtube.com/channel/UCZH3Gg1BfzzAwvSLj7ehGKw', '_self');
         }
         function home() {
-            window.open('anaSayfa.html', '_self');
+            window.open('./anaSayfa', '_self');
         }
-        document.addEventListener('visibilitychange', function() {
-            var pageTitle = document.getElementById('page-title');
-
-            if (document.visibilityState === 'visible') {
-                pageTitle.textContent = 'Bug Repair | Farm Mods TV';
-            } else {
-                setTimeout(function() {
-                pageTitle.textContent = "Bug Repair | Farm Mods TV"; }, 100,);
-            }
-        });
     </script>
 </head>
 <body>
     <ol>
         <ul>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="./projects">Projects</a></li>
+            <li><a href="./about">About</a></li>
             <li><a href="mailto:farmmodstv@gmail.com">Contact</a></li>
-            <li><a href="modStatesList.html">Mod States List</a></li>
-            <li><a href="bugRepairList.html" class="buSayfa">Bug Repair List</a></li>
+            <li><a href="./modStatesList">Mod States List</a></li>
+            <li><a href="./bugRepairList">Bug Repair List</a></li>
         </ul>
     </ol>
     <div class="marka" onclick="home()">Farm Mods TV</div>
     <div class="bolum">
-        <iframe class="usttanBosluk" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQFtIUUCZ9wuAXkPnCOo2sf_AG8iyDAVCENHawCyBUIF2CDatC17kGJGkmSrQkbrRr3FR33L9Jpe-Nr/pubhtml?gid=1386834576&single=true"></iframe>
+        <iframe class="usttanBosluk" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQFtIUUCZ9wuAXkPnCOo2sf_AG8iyDAVCENHawCyBUIF2CDatC17kGJGkmSrQkbrRr3FR33L9Jpe-Nr/pubhtml?gid=1386834576&single=true" alt="Bug Repair List"></iframe>
     </div>
     <footer>
         <div class="telif">
@@ -182,9 +173,9 @@
         </div>
         
         <div class="kutularContainer">
-            <div class="kutular" onclick="facebook()"><img src="genelFotolar/facebook.png" alt="Açıklama metni" width="35px" height="35px"></div>
-            <div class="kutular" onclick="instagram()"><img src="genelFotolar/instagram.png" alt="Açıklama metni" width="35px" height="35px"></div>            
-            <div class="kutular" onclick="youtube()"><img src="genelFotolar/youtube.png" alt="Açıklama metni" width="35px" height="35px"></div>
+            <div class="kutular" onclick="facebook()"><img src="genelFotolar/facebook.png" alt="Farm Mods TV Facebook" width="35px" height="35px"></div>
+            <div class="kutular" onclick="instagram()"><img src="genelFotolar/instagram.png" alt="Farm Mods TV Instagram" width="35px" height="35px"></div>            
+            <div class="kutular" onclick="youtube()"><img src="genelFotolar/youtube.png" alt="Farm Mods TV Youtube" width="35px" height="35px"></div>
         </div>
     </footer>
 </body>
