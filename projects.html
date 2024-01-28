@@ -173,6 +173,7 @@
             background: white;
             border-radius: 25px;
             overflow: hidden;
+            border:rgba(0, 0, 0, 0) solid ;
         }
         .projeler:hover {
             border: #ff5700 solid;
@@ -226,7 +227,7 @@
             window.open('https://www.youtube.com/channel/UCZH3Gg1BfzzAwvSLj7ehGKw', '_self');
         }
         function home() {
-            window.open('anaSayfa.html', '_self');
+            window.open('./anaSayfa', '_self');
         }
         function anthem() {
             window.open('Anthem_6x4_Pack.html', '_self');
@@ -234,16 +235,19 @@
         function barrier() {
             window.open('Barrier_Pack.html', '_self');
         }
+        function pickup() {
+            window.open('\'86_Pickup_Revolution.html', '_self');
+        }
     </script>
 </head>
 <body>
     <ol>
         <ul>
-            <li><a href="projects.html" class="buSayfa">Projects</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="./projects">Projects</a></li>
+            <li><a href="./about">About</a></li>
             <li><a href="mailto:farmmodstv@gmail.com">Contact</a></li>
-            <li><a href="modStatesList.html">Mod States List</a></li>
-            <li><a href="bugRepairList.html">Bug Repair List</a></li>
+            <li><a href="./modStatesList">Mod States List</a></li>
+            <li><a href="./bugRepairList">Bug Repair List</a></li>
         </ul>
     </ol>
     <div class="marka" onclick="home()">Farm Mods TV</div>
@@ -261,43 +265,43 @@
                 <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word">Barrier Pack</div>
                 <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">New Mod</div>
             </div>
-            <div class="projeler" onclick="barrier()">
+            <div class="projeler" onclick="pickup()">
                 <div style="width: 300px; height: 300px; left: 0px; top: 0px; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div style="width: 300px; height: 215px; left: 0px; top: 0px; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word">Project Name</div>
-                <div style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">Project Type</div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0px; top: 0px; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('pickupRevolutionFotos/screenshot_1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: Inter; font-weight: 400; word-wrap: break-word">'86 Pickup Revolution</div>
+                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">Project Type: New Mod</div>
             </div>
             <div class="projeler" onclick="barrier()">
                 <div style="width: 300px; height: 300px; left: 0px; top: 0px; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div style="width: 300px; height: 215px; left: 0px; top: 0px; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word">Project Name</div>
-                <div style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">Project Type</div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0px; top: 0px; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word">Project Name</div>
+                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">Project Type</div>
             </div>
         </div>
         <div class="projelerContainer" >
             <div class="projeler" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
                 <div style="width: 300px; height: 300px; left: 0px; top: 0px; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div style="width: 300px; height: 215px; left: 0px; top: 0px; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word">Project Name</div>
-                <div style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">Project Type</div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0px; top: 0px; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word">Project Name</div>
+                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">Project Type</div>
             </div>
             <div class="projeler" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
                 <div style="width: 300px; height: 300px; left: 0px; top: 0px; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div style="width: 300px; height: 215px; left: 0px; top: 0px; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word">Project Name</div>
-                <div style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">Project Type</div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0px; top: 0px; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word">Project Name</div>
+                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">Project Type</div>
             </div>
             <div class="projeler" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
                 <div style="width: 300px; height: 300px; left: 0px; top: 0px; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div style="width: 300px; height: 215px; left: 0px; top: 0px; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word">Project Name</div>
-                <div style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">Project Type</div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0px; top: 0px; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word">Project Name</div>
+                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">Project Type</div>
             </div>
             <div class="projeler" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
                 <div style="width: 300px; height: 300px; left: 0px; top: 0px; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div style="width: 300px; height: 215px; left: 0px; top: 0px; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word">Project Name</div>
-                <div style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">Project Type</div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0px; top: 0px; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word">Project Name</div>
+                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">Project Type</div>
             </div>
         </div>
     </div>
