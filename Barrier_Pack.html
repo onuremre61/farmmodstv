@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Barrier Pack Mod for Farming Simulator 22 by Farm Mods TV">
     <meta name="viewport" content="width=100px, initial-scale=1.0">
     <title>Barrier Pack | Farm Mods TV</title>
     <link rel="icon" href="genelFotolar/FARM MODS TV.png" type="image/x-icon">
@@ -33,7 +34,7 @@
             padding: 0;
             width: auto;
             min-width: 100px;
-            max-width: 500px;
+            max-width: 650px;
             overflow: hidden;
             border-bottom-left-radius: 25px;
             border-bottom-right-radius: 25px;
@@ -66,12 +67,6 @@
             ol {
                 left: -27px;
             }
-        }
-
-
-        .markalama {
-            float: left;
-            margin: 0;
         }
         li:last-child {
             border-right: none;
@@ -110,9 +105,8 @@
             top: 0;
             left: 0;
             font-size: 25px;
-            padding: 0px 0px;
+            padding: 0 0;
             background-color: #ff5700; /* Örnek bir renk */
-            margin: 0px; /* Kutular arasında boşluk bırakmak için */
             display: block; /* Kutuların yan yana gelmesini sağlar */
             color: #2f2e2e;
             text-align: center;
@@ -132,7 +126,7 @@
         .kutularContainer {
             display: flex;
             float: right;
-            flex-direction: line; /* Kutuları yatay yönde konumlandır */
+            flex-direction: row; /* Kutuları yatay yönde konumlandır */
             position: fixed;
             bottom: 1px;
             right: 1px;
@@ -216,7 +210,7 @@
         .detayResimiContainer {
             display: flex;
             float: right;
-            flex-direction: line; /* Kutuları yatay yönde konumlandır */
+            flex-direction: row; /* Kutuları yatay yönde konumlandır */
             position: relative;
             top: -800px;
             left: 300px;
@@ -233,7 +227,7 @@
         .detayResimiContainer2 {
             display: flex;
             float: right;
-            flex-direction: line; /* Kutuları yatay yönde konumlandır */
+            flex-direction: row; /* Kutuları yatay yönde konumlandır */
             position: relative;
             top: -780px;
             left: 300px;
@@ -253,7 +247,7 @@
             .detayKutusuBaslik {
                 font-size: 25px;
                 position: relative;
-                left: 0px;
+                left: 0;
             }
         }
         .detayKutusuYazilariAciklama {
@@ -269,10 +263,10 @@
         .detayKutusuYazilariModDetayButton {
             position: relative;
             top: 245px;
-            left: 0px;
+            left: 0;
             color: #2e2f2f;
             font-size: 30px;
-            font-family: Inter;
+            font-family: 'Inter', serif;
             font-weight: 300;
             word-wrap: break-word;
         }
@@ -306,8 +300,8 @@
             window.open('modStatesList.html', '_self');
         }
         document.addEventListener("scroll", function() {
-            var menu = document.querySelector('.ol');
-            var scrollPosition = window.scrollY;
+            let menu = document.querySelector('.ol');
+            let scrollPosition = window.scrollY;
           
             if (scrollPosition > 100) { // Belirli bir kaydırma mesafesine ulaşıldığında menüyü kaydır
               menu.style.top = '-50px'; // Menüyü yukarı kaydır (gizle)
@@ -320,11 +314,12 @@
 <body>
     <ol>
         <ul>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="./projects">Projects</a></li>
             <li><a href="mailto:farmmodstv@gmail.com">Contact</a></li>
-            <li><a href="modStatesList.html">Mod States List</a></li>
-            <li><a href="bugRepairList.html">Bug Repair List</a></li>
+            <li><a href="./modStatesList">Mod States List</a></li>
+            <li><a href="./bugRepairList">Bug Repair List</a></li>
+            <li><a href="https://www.farming-simulator.com/mods.php?lang=en&org_id=229266">ModHub</a></li>
+            <li><a href="https://linktr.ee/farmmodstv">Linktr.ee</a></li>
         </ul>
     </ol>
     <div class="marka" onclick="home()">Farm Mods TV</div>
@@ -334,16 +329,16 @@
             <p class="detayKutusuYazilari">Project Type: New Mod</p>
             <p class="detayKutusuYazilari">Create Date: 15.01.2024</p>
             <p class="detayKutusuYazilari">Estimated Publish Date: March 2024</p>
-            <p class="detayKutusuYazilariAciklama">Project Description</p>
+            <p class="detayKutusuYazilariAciklama">-- Not Defined --</p>
             <div class="detayKutusuYazilariModDetayButton" onclick="modDetay()">Check Mod States</div>
         </div>
         <div class="detayResimiContainer">
-            <img class="detayResimi" src="https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png">
-            <img class="detayResimi" src="https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png">
+            <img class="detayResimi" src="https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png" alt="Barrier Pack Image 1">
+            <img class="detayResimi" src="https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png" alt="Barrier Pack Image 2">
         </div>
         <div class="detayResimiContainer2">
-            <img class="detayResimi" src="https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png">
-            <img class="detayResimi" src="https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png">
+            <img class="detayResimi" src="https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png" alt="Barrier Pack Image 3">
+            <img class="detayResimi" src="https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png" alt="Barrier Pack Image 4">
         </div>
     </div>
     <footer>
@@ -352,10 +347,14 @@
         </div>
         
         <div class="kutularContainer">
-            <div class="kutular" onclick="facebook()"><img src="genelFotolar/facebook.png" alt="Açıklama metni" width="35px" height="35px"></div>
-            <div class="kutular" onclick="instagram()"><img src="genelFotolar/instagram.png" alt="Açıklama metni" width="35px" height="35px"></div>            
-            <div class="kutular" onclick="youtube()"><img src="genelFotolar/youtube.png" alt="Açıklama metni" width="35px" height="35px"></div>
+            <div class="kutular" onclick="facebook()"><img src="genelFotolar/facebook.png" alt="Farm Mods TV Facebook" width="35px" height="35px"></div>
+            <div class="kutular" onclick="instagram()"><img src="genelFotolar/instagram.png" alt="Farm Mods TV Instagram" width="35px" height="35px"></div>            
+            <div class="kutular" onclick="youtube()"><img src="genelFotolar/youtube.png" alt="Farm Mods TV Youtube" width="35px" height="35px"></div>
         </div>
     </footer>
+    <script data-name="BMC-Widget" data-cfasync="false"
+            src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="fmtv"
+            data-description="Support me on Buy me a coffee!" data-message="" data-color="#FF813F"
+            data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 </body>
 </html>
