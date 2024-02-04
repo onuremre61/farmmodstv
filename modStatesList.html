@@ -124,19 +124,20 @@
                 margin-left: 100px;
             }
         }
-
         .kutularContainer {
             display: flex;
             float: right;
             flex-direction: row; /* Kutuları yatay yönde konumlandır */
             position: fixed;
-            bottom: 1px;
-            right: 1px;
+            bottom: 18px;
+            right: 135px;
+            scale: 1.5;
         }
         .kutular:hover {
             background-color: #ffffff; /* Fare üzerine gelindiğinde arka plan rengini değiştir */
             color: #ffffff;
             cursor: pointer;
+            scale: 1.1;
         }
         .bolum {
             padding: 0;
@@ -207,12 +208,14 @@
         <div class="kutularContainer">
             <div class="kutular" onclick="facebook()"><img src="genelFotolar/facebook.png" alt="Farm Mods TV Facebook" width="35px" height="35px"></div>
             <div class="kutular" onclick="instagram()"><img src="genelFotolar/instagram.png" alt="Farm Mods TV Instagram" width="35px" height="35px"></div>            
-            <div class="kutular" onclick="youtube()"><img src="genelFotolar/youtube.png" alt="Farm Mods TV Youtube" width="35px" height="35px"></div>
+            <div class="kutular" onclick="youtube()"><img src="genelFotolar/youtube.png" alt="Farm Mods TV Youtube" width="50px" height="35px"></div>
         </div>
     </footer>
     <script data-name="BMC-Widget" data-cfasync="false"
             src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="fmtv"
-            data-description="Support me on Buy me a coffee!" data-message="" data-color="#FF813F"
-            data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+            data-description="Support me on Buy me a coffee!" data-message=""
+            data-color="#FF5700" data-position="Right" data-x_margin="10" data-y_margin="10"
+            data-width="300px" data-height="300px" data-scale="1">
+    </script>
 </body>
 </html>
