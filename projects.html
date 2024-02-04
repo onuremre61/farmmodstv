@@ -122,19 +122,21 @@
                 margin-left: 100px;
             }
         }
-
         .kutularContainer {
+            visibility: hidden;
             display: flex;
             float: right;
             flex-direction: row; /* Kutuları yatay yönde konumlandır */
             position: fixed;
-            bottom: 1px;
-            right: 1px;
+            bottom: 18px;
+            right: 135px;
+            scale: 1.5;
         }
         .kutular:hover {
             background-color: #ffffff; /* Fare üzerine gelindiğinde arka plan rengini değiştir */
             color: #ffffff;
             cursor: pointer;
+            scale: 1.1;
         }
         .bolum {
             background-color: #f1f1f1;
@@ -234,6 +236,9 @@
         function pickup() {
             window.open('\'86_Pickup_Revolution.html', '_self');
         }
+        function police() {
+            window.open('\policePickup.html', '_self');
+        }
     </script>
 </head>
 <body>
@@ -259,20 +264,20 @@
             <div class="projeler" onclick="barrier()">
                 <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
                 <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Barrier Pack</div>
-                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">New Mod</div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">Barrier Pack</div>
+                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">New Mod</div>
             </div>
             <div class="projeler" onclick="pickup()">
                 <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
                 <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('pickupRevolutionFotos/screenshot_1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">'86 Pickup Revolution</div>
-                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">New Mod</div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">'86 Pickup Revolution</div>
+                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">New Mod</div>
             </div>
-            <div class="projeler">
+            <div class="projeler" onclick="police()">
                 <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Name</div>
-                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Type</div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('policePickupFotos/screenshot_1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">2017 Pickup Police</div>
+                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">Big Update</div>
             </div>
         </div>
         <div class="projelerContainer" >
@@ -309,12 +314,14 @@
         <div class="kutularContainer">
             <div class="kutular" onclick="facebook()"><img src="genelFotolar/facebook.png" alt="Açıklama metni" width="35px" height="35px"></div>
             <div class="kutular" onclick="instagram()"><img src="genelFotolar/instagram.png" alt="Açıklama metni" width="35px" height="35px"></div>            
-            <div class="kutular" onclick="youtube()"><img src="genelFotolar/youtube.png" alt="Açıklama metni" width="35px" height="35px"></div>
+            <div class="kutular" onclick="youtube()"><img src="genelFotolar/youtube.png" alt="Açıklama metni" width="50px" height="35px"></div>
         </div>
     </footer>
     <script data-name="BMC-Widget" data-cfasync="false"
             src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="fmtv"
-            data-description="Support me on Buy me a coffee!" data-message="" data-color="#FF813F"
-            data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+            data-description="Support me on Buy me a coffee!" data-message=""
+            data-color="#FF5700" data-position="Right" data-x_margin="10" data-y_margin="10"
+            data-width="300px" data-height="300px" data-scale="1">
+    </script>
 </body>
 </html>
