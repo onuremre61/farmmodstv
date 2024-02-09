@@ -27,13 +27,25 @@
                 overflow-x: hidden;
             }
         }
-
-
+        body::-webkit-scrollbar {
+            width: 10px; /* Genişlik */
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #ff5700;
+            border-radius: 6px; /* Kenar yarıçapı */
+        }
+        body::-webkit-scrollbar-track {
+            background-color: #2f2e2e; /* Kaydırma çubuğu yolu rengi */
+        }
         .buSayfa {
             color: #ffffff;
+            border-bottom: 2px solid #ffffff; /* Alt çizgi ekler */
+            padding-bottom: 3px; /* Metin ile çizgi arasına 5 piksel boşluk ekler */
+            text-decoration: none; /* Varsa varsayılan alt çizgiyi kaldırır */
         }
         ul {
             list-style-type: none;
+            font-size: 16px;
             margin-right: 50px;
             padding: 0;
             width: auto;
@@ -129,9 +141,8 @@
             float: right;
             flex-direction: row; /* Kutuları yatay yönde konumlandır */
             position: fixed;
-            bottom: 18px;
-            right: 135px;
-            scale: 1.5;
+            bottom: 15px;
+            right: 90px;
         }
         .kutular:hover {
             background-color: #ffffff; /* Fare üzerine gelindiğinde arka plan rengini değiştir */
@@ -172,16 +183,25 @@
     </style>
     <script>
         function instagram() {
-            window.open('https://www.instagram.com/farmmodstv/', '_self');
+            window.open('https://www.instagram.com/farmmodstv/', '_blank');
         }
         function facebook() {
-            window.open('https://www.facebook.com/farmmodstv/', '_self');
+            window.open('https://www.facebook.com/farmmodstv/', '_blank');
         }
         function youtube() {
-            window.open('https://www.youtube.com/channel/UCZH3Gg1BfzzAwvSLj7ehGKw', '_self');
+            window.open('https://www.youtube.com/channel/UCZH3Gg1BfzzAwvSLj7ehGKw', '_blank');
         }
         function home() {
-            window.open('./anaSayfa', '_self');
+            window.open('./', '_self');
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "https://www.farmmodstv.net/modStatesList",
+            "url": "https://www.farmmodstv.net/modStatesList",
+            "name": "Mod States | Farm Mods TV",
+            "description": "Lastest State List of Farm Mods TV's Mods"
         }
     </script>
 </head>
@@ -192,8 +212,8 @@
             <li><a href="mailto:farmmodstv@gmail.com">Contact</a></li>
             <li><a class="buSayfa" href="./modStatesList">Mod States List</a></li>
             <li><a href="./bugRepairList">Bug Repair List</a></li>
-            <li><a href="https://www.farming-simulator.com/mods.php?lang=en&org_id=229266">ModHub</a></li>
-            <li><a href="https://linktr.ee/farmmodstv">Linktr.ee</a></li>
+            <li><a href="https://www.farming-simulator.com/mods.php?lang=en&org_id=229266" target="_blank">&#8599;ModHub</a></li>
+            <li><a href="https://linktr.ee/farmmodstv" target="_blank">&#8599;Linktr.ee</a></li>
         </ul>
     </ol>
     <div class="marka" onclick="home()">Farm Mods TV</div>
