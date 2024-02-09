@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="New Mods & New Updates">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="page-title">Projects | Farm Mods TV</title>
     <link rel="icon" href="genelFotolar/FARM MODS TV.png" type="image/x-icon">
@@ -10,6 +11,16 @@
             background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/FARM MODS TV (1).png'); /* Arka plan resmi belirtme */
             background-size: cover; /* Resmi bölüm boyutuna sığacak şekilde ayarlama */
             background-position: center; /* Resmi bölümün ortasına yerleştirme */
+        }
+        body::-webkit-scrollbar {
+            width: 10px; /* Genişlik */
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #ff5700;
+            border-radius: 6px; /* Kenar yarıçapı */
+        }
+        body::-webkit-scrollbar-track {
+            background-color: #2f2e2e; /* Kaydırma çubuğu yolu rengi */
         }
         @media only screen and (min-width: 851px) {
             body {
@@ -26,13 +37,15 @@
                 overflow-x: hidden;
             }
         }
-
         .buSayfa {
             color: #ffffff;
-        }
-        
+            border-bottom: 2px solid #ffffff; /* Alt çizgi ekler */
+            padding-bottom: 3px; /* Metin ile çizgi arasına 5 piksel boşluk ekler */
+            text-decoration: none; /* Varsa varsayılan alt çizgiyi kaldırır */
+        }        
         ul {
             list-style-type: none;
+            font-size: 16px;
             margin-right: 50px;
             padding: 0;
             width: auto;
@@ -116,6 +129,7 @@
             border-bottom-left-radius: 25px;
             border-bottom-right-radius: 25px;
             cursor: pointer;
+            z-index: 999;
         }
         @media only screen and (max-width: 850px) {
             .marka {
@@ -123,14 +137,12 @@
             }
         }
         .kutularContainer {
-            visibility: hidden;
             display: flex;
             float: right;
             flex-direction: row; /* Kutuları yatay yönde konumlandır */
             position: fixed;
-            bottom: 18px;
-            right: 135px;
-            scale: 1.5;
+            bottom: 15px;
+            right: 90px;
         }
         .kutular:hover {
             background-color: #ffffff; /* Fare üzerine gelindiğinde arka plan rengini değiştir */
@@ -139,23 +151,22 @@
             scale: 1.1;
         }
         .bolum {
-            background-color: #f1f1f1;
             text-align: center;
-            background-color: rgba(0, 0, 0, 0);
-            background-size: cover; /* Resmi bölüm boyutuna sığacak şekilde ayarlama */
-            background-position: center; /* Resmi bölümün ortasına yerleştirme */
+            background-color: rgba(0, 0, 0, 0.5);
             position: relative;
+            width: 1250px;
             top: 60px;
             left: 130px;
         }
         @media only screen and (max-width: 850px) {
             .bolum {
-                top: 150px;
-                left: 0;
+                width: 800px;
                 height: auto;
+                left: 0;
+                top: 200px;
+                overflow: hidden;
             }
         }
-
         .telif {
             position: fixed;
             color: #ffffff;
@@ -176,6 +187,7 @@
         .projeler:hover {
             border: #ff5700 solid;
             border-radius: 25px;
+            cursor: pointer;
         }
         @media only screen and (max-width: 850px) {
             .projeler {
@@ -198,34 +210,30 @@
             border-radius: 25px;
             cursor: pointer;
         }
-        .projeFotos:hover{
-            border-top-left-radius: 25px;
-        }
         .projelerContainer {
             display: flex;
             flex-direction: row;
         }        
         @media only screen and (max-width: 850px) {
             .projelerContainer {
-                width: 100%;
-                max-width: 700px;
-                height: 100%;
-                max-height: 700px;
+                top: 450px;
+                display: block;
+                overflow: hidden;
             }
         }
     </style>
     <script>
         function instagram() {
-            window.open('https://www.instagram.com/farmmodstv/', '_self');
+            window.open('https://www.instagram.com/farmmodstv/', '_blank');
         }
         function facebook() {
-            window.open('https://www.facebook.com/farmmodstv/', '_self');
+            window.open('https://www.facebook.com/farmmodstv/', '_blank');
         }
         function youtube() {
-            window.open('https://www.youtube.com/channel/UCZH3Gg1BfzzAwvSLj7ehGKw', '_self');
+            window.open('https://www.youtube.com/channel/UCZH3Gg1BfzzAwvSLj7ehGKw', '_blank');
         }
         function home() {
-            window.open('./anaSayfa', '_self');
+            window.open('./', '_self');
         }
         function anthem() {
             window.open('Anthem_6x4_Pack.html', '_self');
@@ -240,6 +248,15 @@
             window.open('\policePickup.html', '_self');
         }
     </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "https://www.farmmodstv.net/projects",
+            "url": "https://www.farmmodstv.net/projects",
+            "name": "Projects | Farm Mods TV",
+            "description": "New Mods & New Updates"
+        }
+    </script>
 </head>
 <body>
     <ol>
@@ -248,8 +265,8 @@
             <li><a href="mailto:farmmodstv@gmail.com">Contact</a></li>
             <li><a href="./modStatesList">Mod States List</a></li>
             <li><a href="./bugRepairList">Bug Repair List</a></li>
-            <li><a href="https://www.farming-simulator.com/mods.php?lang=en&org_id=229266">ModHub</a></li>
-            <li><a href="https://linktr.ee/farmmodstv">Linktr.ee</a></li>
+            <li><a href="https://www.farming-simulator.com/mods.php?lang=en&org_id=229266" target="_blank">&#8599;ModHub</a></li>
+            <li><a href="https://linktr.ee/farmmodstv" target="_blank">&#8599;Linktr.ee</a></li>
         </ul>
     </ol>
     <div class="marka" onclick="home()">Farm Mods TV</div>
@@ -280,29 +297,29 @@
                 <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">Big Update</div>
             </div>
         </div>
-        <div class="projelerContainer" >
+        <div class="projelerContainer">
             <div class="projeler" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
                 <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
                 <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Name</div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Name 1</div>
                 <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Type</div>
             </div>
             <div class="projeler" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
                 <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
                 <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Name</div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Name 2</div>
                 <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Type</div>
             </div>
             <div class="projeler" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
                 <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
                 <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Name</div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Name 3</div>
                 <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Type</div>
             </div>
             <div class="projeler" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
                 <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
                 <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Name</div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Name 4</div>
                 <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Type</div>
             </div>
         </div>
