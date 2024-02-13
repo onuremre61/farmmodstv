@@ -11,18 +11,28 @@
             background-size: cover; /* Resmi bölüm boyutuna sığacak şekilde ayarlama */
             background-position: center; /* Resmi bölümün ortasına yerleştirme */
         }
+        body::-webkit-scrollbar {
+            width: 10px; /* Genişlik */
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #ff5700;
+            border-radius: 6px; /* Kenar yarıçapı */
+        }
+        body::-webkit-scrollbar-track {
+            background-color: #2f2e2e; /* Kaydırma çubuğu yolu rengi */
+        }
         ul {
             list-style-type: none;
             margin-right: 50px;
             padding: 0;
             width: auto;
+            max-height: 100px;
             min-width: 100px;
             max-width: 500px;
             overflow: hidden;
             border-bottom-left-radius: 25px;
             border-bottom-right-radius: 25px;
             background-color: #ff5700;
-            display: none;
         }
         li {
             float: left;
@@ -34,10 +44,6 @@
             position: fixed;
             top: 0;
             right: 0;
-        }
-        .markalama {
-            float: left;
-            margin: 0;
         }
         li:last-child {
             border-right: none;
@@ -52,22 +58,10 @@
             margin: 0;
         }
         li a:hover {
-
             color: #ffffff;
-            margin: 0;
-        }
-        .kutular {
-            width: 35px;
-            height: 35px;
-            font-size: 25px;
-            background-color: #ffffff; /* Örnek bir renk */
-            margin: 5px; /* Kutular arasında boşluk bırakmak için */
-            display: block; /* Kutuların yan yana gelmesini sağlar */
-            color: #2f2e2e;
-            text-align: center;
-            border-radius: 25px;
-            cursor: pointer;
-            table-layout:auto;
+            border-bottom: 2px solid #ffffff; /* Alt çizgi ekler */
+            padding-bottom: 3px; /* Metin ile çizgi arasına 5 piksel boşluk ekler */
+            text-decoration: none; /* Varsa varsayılan alt çizgiyi kaldırır */
         }
         .marka {
             width: 200px;
@@ -86,145 +80,309 @@
             border-bottom-right-radius: 25px;
             cursor: pointer;
         }
-        .kutularContainer {
-            display: flex;
-            float: right;
-            flex-direction: line; /* Kutuları yatay yönde konumlandır */
-            position: fixed;
-            bottom: 1px;
-            right: 1px;
-        }
-        .kutular:hover {
-            background-color: #ffffff; /* Fare üzerine gelindiğinde arka plan rengini değiştir */
-            color: #ffffff;
-            cursor: pointer;
-        }
         .bolum {
             padding: 300px;
             background-color: #f1f1f1;
             text-align: center;
             font-size: 100px;
             color: #ffffff;
-            font: impact;
+            
             background-color: rgba(0, 0, 0, 0);
             background-size: cover; /* Resmi bölüm boyutuna sığacak şekilde ayarlama */
             background-position: center; /* Resmi bölümün ortasına yerleştirme */
         }
-        .telif {
-            position: fixed;
-            color: #ffffff;
-            bottom: 3px;
-            left: 3px;
+        /* Dropdown menü stilleri */
+        .dropdown {
+            position: relative;
+            display: inline-block;
         }
-        body {
-            font-family: Arial, sans-serif;
-        }
-        
-        .mobile-menu {
-            background-color: #ff5700;
-            border-bottom-left-radius: 25px;
-            border-bottom-right-radius: 25px;
-            overflow: hidden;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .menu-list {
-            list-style-type: none;
-            padding: 0;
-            display: none;
-        }
-        
-        .menu-list li {
-            padding: 10px;
-            text-align: center;
-        }
-        
-        .menu-list a {
-            text-decoration: none;
+
+        .dropbtn {
+            background-color: rgba(0,0,0,0);
             color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
             display: block;
         }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover ul {
+            height: 100px;
+        }
         
-        #toggle-btn {
-            background-color: #ff5700;
-            color: white;
-            padding: 10px;
-            border: none;
-            width: 100%;
+        .showPopupBtn {
             cursor: pointer;
         }
         
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding-top: 65px;
+            
+        }
+
+        .popup-content {
+            background-image: linear-gradient(0deg, rgba(1, 1, 1, 1) 0%, rgba(1, 1, 1, 0) 100%), url('anthemPackFotos/screenshot4.jpg');
+            background-size: 1024px 576px;
+            width: 980px;
+            height: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 16px;
+            right: 18px;
+            font-size: 20px;
+            cursor: pointer;
+            color: orange;
+            scale: 4.0;
+        }
+        .popupyazi {
+            position: absolute;
+            bottom: 90px;
+            left: 190px;
+            color: #ffffff;
+            font-size: 50px;
+        }
+        .popupbutton {
+            position: absolute;
+            bottom: 10px;
+            left: 370px;
+            color: #ffffff;
+            font-size: 50px;
+            padding: 5px;
+        }
+        .popupbutton:hover {
+            position: absolute;
+            bottom: 10px;
+            left: 370px;
+            color: #ffffff;
+            font-size: 50px;
+            border: white solid;
+            cursor: pointer;
+        }
+        .modlar {
+            position: relative;
+            width: 996px;
+            height: 350px;
+            background-color: #ff5700;
+            border: 5px solid #ffffff;
+            margin: 25px 0;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        .modlarcon {
+            visibility: hidden; //
+            position: relative;
+            padding: 15px;
+            margin-bottom: 85px;
+            top: 65px;
+            display: block;
+            max-width: 1024px;
+            max-height: 10000px;
+            width: 100%;
+            height: 100%;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        .modlarresim {
+            position: relative;
+            top: 50%;
+            left: 50px;
+            width: 250px;
+            height: 250px;
+            background-color: aqua;
+            transform: translate(0, -50%);
+        }
+        .modlaryazi {
+            position: relative;
+            right: -400px;
+            top: -61.6%;
+            width: 500px;
+            height: 250px;
+            
+            font-size: 18px;
+        }
+        .modlarbutton {
+            position: relative;
+            right: -400px;
+            top: -69%;
+            width: 500px;
+            font-size: 20px;
+            padding: 1px;
+            text-align: center;
+            overflow: hidden;
+            border: solid transparent;
+        }
+        .modlarbutton:hover {
+            border: solid #ffffff;
+            color: white;
+            cursor: pointer;
+            border-radius: 25px;
+        }
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
     </style>
     <script>
-        function instagram() {
-            window.open('https://www.instagram.com/farmmodstv/', '_self');
-        }
-        function facebook() {
-            window.open('https://www.facebook.com/farmmodstv/', '_self');
-        }
-        function youtube() {
-            window.open('https://www.youtube.com/channel/UCZH3Gg1BfzzAwvSLj7ehGKw', '_self');
-        }
         function home() {
             window.open('anaSayfa.html', '_self');
         }
-        document.addEventListener('visibilitychange', function() {
-            var pageTitle = document.getElementById('page-title');
-
-            if (document.visibilityState === 'visible') {
-                pageTitle.textContent = 'Coming Soon...';
+        function checkOrientation() {
+            if (window.innerHeight > window.innerWidth) {
+                // Dikey moddayız, uyarıyı göster
+                document.getElementById('uyariArka').style.display = 'block';
             } else {
-                setTimeout(function() {
-                pageTitle.textContent = "I'm waiting here!!!"; }, 2000,);
+                // Yatay moda geçildi, uyarıyı gizle
+                document.getElementById('uyariArka').style.display = 'none';
             }
-        });
-        document.addEventListener('DOMContentLoaded', function () {
-            var toggleBtn = document.getElementById('toggle-btn');
-            var menuList = document.querySelector('.menu-list');
+        }
 
-            toggleBtn.addEventListener('mouseover', function () {
-                menuList.style.display = 'block';
-            });
+        // Sayfa yüklendiğinde ve cihazın yönlendirmesi değiştiğinde kontrol et
+        window.addEventListener('load', checkOrientation);
+        window.addEventListener('orientationchange', checkOrientation);
+        window.addEventListener('resize', checkOrientation);
+        
+        
+        // Belirli bir trafik kaynağından gelen kullanıcılara pop-up göster
+        function showPopup() {
+            var referrer = document.referrer.toLowerCase();
+            if (referrer.includes('https://www.kingmods.net/')) {
+                document.getElementById('popup').style.display = 'block';
+            }
+        }
 
-            menuList.addEventListener('mouseout', function () {
-                menuList.style.display = 'none';
-            });
-        });
+        // Pop-up'ı kapat
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        // Sayfa yüklendiğinde kontrol et
+        window.addEventListener('load', showPopup);
     </script>
 </head>
 <body>
-    <ol>
-        <ul>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="mailto:farmmodstv@gmail.com">Contact</a></li>
-            <li><a href="modStatesList.html">Mod States List</a></li>
-            <li><a href="bugRepairList.html">Bug Repair List</a></li>
-        </ul>
-    </ol>
     <div class="marka" onclick="home()">Farm Mods TV</div>
-    <div class="bolum">
-       <div>COMING SOON....</div>
-       <div class="mobile-menu">
-        <button id="toggle-btn">Toggle Menu</button>
-        <ul class="menu-list">
-            <li><a href="#">Item 1</a></li>
-            <li><a href="#">Item 2</a></li>
-            <li><a href="#">Item 3</a></li>
-        </ul>
-    </div>  
+    <div id="popup">
+        <p>Hoş geldiniz! Özel teklifimizi kaçırmayın.</p>
+        <button onclick="closePopup()">Kapat</button>
+    </div>
+    <div>
+        <div class="modlarcon" 
+            <div class="modlar">
+                <div class="modlarresim" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://cdn5.giants-software.com/modHub/storage/00260176/iconBig.jpg'); background-size: cover; background-position: center;">
+                    
+                </div>
+                <p class="modlaryazi">The Anthem 6x4 Pack redefines versatility in transportation with its customizable features and diverse options. Offering a selection of cabin types, including spacious sleepers and compact day cabins, users can tailor their driving experience to match their specific needs. The addition of a hood mirror option enhances safety and visibility, crucial for navigating various terrains and tight spaces. Wheel customization allows users to optimize performance based on the demands of specific tasks and environments. The extensive range of main and rim color options not only adds a personalized touch but also allows users to express their individual style and brand identity.
+                </p>
+                <div class="modlarbutton" onclick="window.location.href='https://www.youtube.com/watch?v=D18l_KUrtaY&t=9s';">
+                    Learn More!!
+                </div>
+            </div>
+            <div class="modlar">
+                <div class="modlarresim">
+
+                </div>
+                <p class="modlaryazi">The Anthem 6x4 Pack redefines versatility in transportation with its customizable features and diverse options. Offering a selection of cabin types, including spacious sleepers and compact day cabins, users can tailor their driving experience to match their specific needs. The addition of a hood mirror option enhances safety and visibility, crucial for navigating various terrains and tight spaces. Wheel customization allows users to optimize performance based on the demands of specific tasks and environments. The extensive range of main and rim color options not only adds a personalized touch but also allows users to express their individual style and brand identity.
+                </p>
+                <div class="modlarbutton">
+                    Learn More!!
+                </div>
+            </div>
+            <div class="modlar">
+                <div class="modlarresim">
+
+                </div>
+                <p class="modlaryazi">The Anthem 6x4 Pack redefines versatility in transportation with its customizable features and diverse options. Offering a selection of cabin types, including spacious sleepers and compact day cabins, users can tailor their driving experience to match their specific needs. The addition of a hood mirror option enhances safety and visibility, crucial for navigating various terrains and tight spaces. Wheel customization allows users to optimize performance based on the demands of specific tasks and environments. The extensive range of main and rim color options not only adds a personalized touch but also allows users to express their individual style and brand identity.
+                </p>
+                <div class="modlarbutton">
+                    Learn More!!
+                </div>
+            </div>
+            <div class="modlar">
+                <div class="modlarresim">
+
+                </div>
+                <p class="modlaryazi">The Anthem 6x4 Pack redefines versatility in transportation with its customizable features and diverse options. Offering a selection of cabin types, including spacious sleepers and compact day cabins, users can tailor their driving experience to match their specific needs. The addition of a hood mirror option enhances safety and visibility, crucial for navigating various terrains and tight spaces. Wheel customization allows users to optimize performance based on the demands of specific tasks and environments. The extensive range of main and rim color options not only adds a personalized touch but also allows users to express their individual style and brand identity.
+                </p>
+                <div class="modlarbutton">
+                    Learn More!!
+                </div>
+            </div>
+            <div class="modlar">
+                <div class="modlarresim">
+
+                </div>
+                <p class="modlaryazi">The Anthem 6x4 Pack redefines versatility in transportation with its customizable features and diverse options. Offering a selection of cabin types, including spacious sleepers and compact day cabins, users can tailor their driving experience to match their specific needs. The addition of a hood mirror option enhances safety and visibility, crucial for navigating various terrains and tight spaces. Wheel customization allows users to optimize performance based on the demands of specific tasks and environments. The extensive range of main and rim color options not only adds a personalized touch but also allows users to express their individual style and brand identity.
+                </p>
+                <div class="modlarbutton">
+                    Learn More!!
+                </div>
+            </div>
+            <div class="modlar">
+                <div class="modlarresim">
+
+                </div>
+                <p class="modlaryazi">The Anthem 6x4 Pack redefines versatility in transportation with its customizable features and diverse options. Offering a selection of cabin types, including spacious sleepers and compact day cabins, users can tailor their driving experience to match their specific needs. The addition of a hood mirror option enhances safety and visibility, crucial for navigating various terrains and tight spaces. Wheel customization allows users to optimize performance based on the demands of specific tasks and environments. The extensive range of main and rim color options not only adds a personalized touch but also allows users to express their individual style and brand identity.
+                </p>
+                <div class="modlarbutton">
+                    Learn More!!
+                </div>
+            </div>
+        </div>
+        <div>COMING SOON....</div>
+        
+        <button class="showPopupBtn" id="showPopupBtn" onclick="showPopup()">Pop-up Göster</button>
+
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <div class="popupyazi">Anthem 6x4 Pack Released Now!!</div>
+                <div class="popupbutton" onclick="window.location.href='https://www.farming-simulator.com/mods.php?lang=en&org_id=229266';">Download Now</div>
+            </div>
+        </div>
     </div>
     <footer>
-        <div class="telif">
-            &copy; Farm Mods TV, Official Website
-        </div>
-        
-        <div class="kutularContainer">
-            <div class="kutular" onclick="facebook()"><img src="facebook.png" alt="Açıklama metni" width="35px" height="35px"></div>
-            <div class="kutular" onclick="instagram()"><img src="instagram.png" alt="Açıklama metni" width="35px" height="35px"></div>            
-            <div class="kutular" onclick="youtube()"><img src="youtube.png" alt="Açıklama metni" width="35px" height="35px"></div>
-        </div>
+
     </footer>
 </body>
 </html>
