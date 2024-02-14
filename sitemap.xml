@@ -1,51 +1,50 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.farmmodstv.net/</loc>
-    <lastmod>2024-02-04</lastmod>
-    <changefreq>always</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.farmmodstv.net/projects</loc>
-    <lastmod>2024-02-04</lastmod>
-    <changefreq>always</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.farmmodstv.net/modStatesList</loc>
-    <lastmod>2024-02-04</lastmod>
-    <changefreq>always</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.farmmodstv.net/bugRepairList</loc>
-    <lastmod>2024-02-04</lastmod>
-    <changefreq>always</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.farmmodstv.net/policePickup.html</loc>
-    <lastmod>2024-02-04</lastmod>
-    <changefreq>always</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.farmmodstv.net/Anthem_6x4_Pack.html</loc>
-    <lastmod>2024-02-04</lastmod>
-    <changefreq>always</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.farmmodstv.net/Barrier_Pack.html</loc>
-    <lastmod>2024-02-04</lastmod>
-    <changefreq>always</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.farmmodstv.net/'86_Pickup_Revolution.html</loc>
-    <lastmod>2024-02-04</lastmod>
-    <changefreq>always</changefreq>
-    <priority>1.0</priority>
-  </url>
+<url>
+<loc>https://www.farmmodstv.net/</loc>
+<lastmod>2024-02-04</lastmod>
+<changefreq>always</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://www.farmmodstv.net/projects</loc>
+<lastmod>2024-02-04</lastmod>
+<changefreq>always</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://www.farmmodstv.net/modStatesList</loc>
+<lastmod>2024-02-04</lastmod>
+<changefreq>always</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://www.farmmodstv.net/bugRepairList</loc>
+<lastmod>2024-02-04</lastmod>
+<changefreq>always</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://www.farmmodstv.net/projects/Anthem_6x4_Pack.html</loc>
+<lastmod>2024-02-04</lastmod>
+<changefreq>always</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://www.farmmodstv.net/projects/policePickup.html</loc>
+<lastmod>2024-02-04</lastmod>
+<changefreq>always</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://www.farmmodstv.net/projects/Barrier_Pack.html</loc>
+<lastmod>2024-02-04</lastmod>
+<changefreq>always</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://www.farmmodstv.net/projects/86_Pickup_Revolution.html</loc>
+<lastmod>2024-02-04</lastmod>
+<changefreq>always</changefreq>
+<priority>1.0</priority>
+</url>
 </urlset>
