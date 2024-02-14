@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Official Farm Mods TV Website. Discover new mods and updates.">
+    <meta name="description" content="All Known Bugs and Repair List of Farm Mods TV's Mods">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Farm Mods TV</title>
+    <title id="page-title">Bug Repair | Farm Mods TV</title>
     <link rel="icon" href="genelFotolar/FARM MODS TV.png" type="image/x-icon">
     <style>
         body {
@@ -12,12 +12,22 @@
             background-size: cover; /* Resmi bölüm boyutuna sığacak şekilde ayarlama */
             background-position: center; /* Resmi bölümün ortasına yerleştirme */
         }
-        @media only screen and (max-width: 850px) {
-            body, html {
-                overflow-x: hidden;
-            }
+        body::-webkit-scrollbar {
+            width: 10px; /* Genişlik */
         }
-
+        body::-webkit-scrollbar-thumb {
+            background-color: #ff5700;
+            border-radius: 6px; /* Kenar yarıçapı */
+        }
+        body::-webkit-scrollbar-track {
+            background-color: #2f2e2e; /* Kaydırma çubuğu yolu rengi */
+        }
+        .buSayfa {
+            color: #ffffff;
+            border-bottom: 2px solid #ffffff; /* Alt çizgi ekler */
+            padding-bottom: 3px; /* Metin ile çizgi arasına 5 piksel boşluk ekler */
+            text-decoration: none; /* Varsa varsayılan alt çizgiyi kaldırır */
+        }
         ul {
             list-style-type: none;
             font-size: 16px;
@@ -34,29 +44,11 @@
         @media only screen and (max-width: 850px) {
             ul {
                 width: 100%; /* Ekran genişliğine göre 100% genişlik */
-                max-width: 600px; /* Maksimum genişlik sınırlamasını kaldır */
+                max-width: 500px; /* Maksimum genişlik sınırlamasını kaldır */
                 border-radius: 25px;
                 margin-top: 50px;
-                margin-right: auto; /* Margin'ı otomatik olarak ayarla */
-                margin-left: auto;
-                left: 50%;
-                right: 50%;
+                margin-right: 150px;
                 align-items: center;
-                text-align: center;
-            }
-        }
-        @media only screen and (max-width: 400px) {
-            ul {
-                width: 100%; /* Ekran genişliğine göre 100% genişlik */
-                max-width: 380px; /* Maksimum genişlik sınırlamasını kaldır */
-                border-radius: 25px;
-                margin-top: 50px;
-                margin-right: auto; /* Margin'ı otomatik olarak ayarla */
-                margin-left: auto;
-                left: 50%;
-                right: 50%;
-                align-items: center;
-                text-align: center;
             }
         }
         li {
@@ -69,12 +61,6 @@
             position: fixed;
             top: 0;
             right: 0;
-            z-index: 999;
-        }
-        @media only screen and (max-width: 850px) {
-            ol {
-                left: -27px;
-            }
         }
         li:last-child {
             border-right: none;
@@ -89,6 +75,7 @@
             margin: 0;
         }
         li a:hover {
+
             color: #ffffff;
             margin: 0;
         }
@@ -103,7 +90,7 @@
             text-align: center;
             border-radius: 25px;
             cursor: pointer;
-            table-layout: auto;
+            table-layout:auto;
         }
         .marka {
             width: 200px;
@@ -122,7 +109,6 @@
             border-bottom-right-radius: 25px;
             cursor: pointer;
         }
-
         .kutularContainer {
             display: flex;
             float: right;
@@ -138,7 +124,8 @@
             scale: 1.1;
         }
         .bolum {
-            padding: 300px;
+            padding: 0;
+            margin-top: 100px;
             background-color: #f1f1f1;
             text-align: center;
             background-color: rgba(0, 0, 0, 0);
@@ -147,19 +134,29 @@
         }
         .telif {
             position: fixed;
+            color: #ffffff;
             bottom: 3px;
             left: 3px;
+        }
+        .usttanBosluk {
+            height: 550px;
+            width: 1175px;
+        }
+        @media only screen and (max-width: 850px) {
+        .usttanBosluk {
+            width: 650px;
+        }
         }
     </style>
     <script>
         function instagram() {
-            window.open('https://www.instagram.com/farmmodstv/', '_self');
+            window.open('https://www.instagram.com/farmmodstv/', '_blank');
         }
         function facebook() {
-            window.open('https://www.facebook.com/farmmodstv/', '_self');
+            window.open('https://www.facebook.com/farmmodstv/', '_blank');
         }
         function youtube() {
-            window.open('https://www.youtube.com/channel/UCZH3Gg1BfzzAwvSLj7ehGKw', '_self');
+            window.open('https://www.youtube.com/channel/UCZH3Gg1BfzzAwvSLj7ehGKw', '_blank');
         }
         function home() {
             window.open('./', '_self');
@@ -168,42 +165,44 @@
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "https://www.farmmodstv.net/",
-            "url": "https://www.farmmodstv.net/",
-            "name": "Farm Mods TV",
-            "description": "Official Farm Mods TV Website"
+            "@type": "https://www.farmmodstv.net/bugRepairList",
+            "url": "https://www.farmmodstv.net/bugRepairList",
+            "name": "Bug Repair | Farm Mods TV",
+            "description": "All Known Bugs and Repair List of Farm Mods TV's Mods"
         }
     </script>
 </head>
 <body>
-<ol>
-    <ul>
-        <li><a href="./projects">Projects</a></li>
-        <li><a href="mailto:farmmodstv@gmail.com">Contact</a></li>
-        <li><a href="./modStatesList">Mod States List</a></li>
-        <li><a href="./bugRepairList">Bug Repair List</a></li>
-        <li><a href="https://www.farming-simulator.com/mods.php?lang=en&org_id=229266">&#8599;ModHub</a></li>
-        <li><a href="https://linktr.ee/farmmodstv">&#8599;Linktr.ee</a></li>
-    </ul>
-</ol>
-<div class="marka" onclick="home()">Farm Mods TV</div>
-<div class="bolum">
-</div>
-<footer>
-    <div class="telif">
-        &copy; Farm Mods TV, Official Website
+    <ol>
+        <ul>
+            <li><a href="./projects">Projects</a></li>
+            <li><a href="mailto:farmmodstv@gmail.com">Contact</a></li>
+            <li><a href="./modStatesList">Mod States List</a></li>
+            <li><a class="buSayfa" href="./bugRepairList">Bug Repair List</a></li>
+            <li><a href="https://www.farming-simulator.com/mods.php?lang=en&org_id=229266" target="_blank">&#8599;ModHub</a></li>
+            <li><a href="https://linktr.ee/farmmodstv" target="_blank">&#8599;Linktr.ee</a></li>
+        </ul>
+    </ol>
+    <div class="marka" onclick="home()">Farm Mods TV</div>
+    <div class="bolum">
+        <iframe class="usttanBosluk" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQFtIUUCZ9wuAXkPnCOo2sf_AG8iyDAVCENHawCyBUIF2CDatC17kGJGkmSrQkbrRr3FR33L9Jpe-Nr/pubhtml?gid=1386834576&single=true"></iframe>
     </div>
-    <div class="kutularContainer">
-        <div class="kutular" onclick="facebook()"><img src="genelFotolar/facebook.png" alt="Farm Mods TV Facebook" width="35px" height="35px"></div>
-        <div class="kutular" onclick="instagram()"><img src="genelFotolar/instagram.png" alt="Farm Mods TV Instagram" width="35px" height="35px"></div>
-        <div class="kutular" onclick="youtube()"><img src="genelFotolar/youtube.png" alt="Farm Mods TV Youtube" width="50px" height="35px"></div>
-    </div>
-</footer>
-<script data-name="BMC-Widget" data-cfasync="false"
-        src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="fmtv"
-        data-description="Support me on Buy me a coffee!" data-message=""
-        data-color="#FF5700" data-position="Right" data-x_margin="8" data-y_margin="8"
-        data-width="300px" data-height="300px" data-scale="1">
-</script>
+    <footer>
+        <div class="telif">
+            &copy; Farm Mods TV, Official Website
+        </div>
+        
+        <div class="kutularContainer">
+            <div class="kutular" onclick="facebook()"><img src="genelFotolar/facebook.png" alt="Farm Mods TV Facebook" width="35px" height="35px"></div>
+            <div class="kutular" onclick="instagram()"><img src="genelFotolar/instagram.png" alt="Farm Mods TV Instagram" width="35px" height="35px"></div>            
+            <div class="kutular" onclick="youtube()"><img src="genelFotolar/youtube.png" alt="Farm Mods TV Youtube" width="50px" height="35px"></div>
+        </div>
+    </footer>
+    <script data-name="BMC-Widget" data-cfasync="false"
+            src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="fmtv"
+            data-description="Support me on Buy me a coffee!" data-message=""
+            data-color="#FF5700" data-position="Right" data-x_margin="10" data-y_margin="10"
+            data-width="300px" data-height="300px" data-scale="1">
+    </script>
 </body>
 </html>

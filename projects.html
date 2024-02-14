@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="New Mods & New Updates">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Projects | Farm Mods TV</title>
+    <link rel="icon" href="genelFotolar/FARM MODS TV.png" type="image/x-icon">
+    <style>
+        body {
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/FARM MODS TV (1).png'); /* Arka plan resmi belirtme */
+            background-size: cover; /* Resmi bölüm boyutuna sığacak şekilde ayarlama */
+            background-position: center; /* Resmi bölümün ortasına yerleştirme */
+        }
+        body::-webkit-scrollbar {
+            width: 10px; /* Genişlik */
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #ff5700;
+            border-radius: 6px; /* Kenar yarıçapı */
+        }
+        body::-webkit-scrollbar-track {
+            background-color: #2f2e2e; /* Kaydırma çubuğu yolu rengi */
+        }
+        @media only screen and (min-width: 851px) {
+            body {
+                overflow: hidden;
+            }
+        }
+        @media only screen and (max-width: 850px) {
+            body {
+                overflow: auto;
+            }
+        }
+        @media only screen and (max-width: 850px) {
+            body, html {
+                overflow-x: hidden;
+            }
+        }
+        .buSayfa {
+            color: #ffffff;
+            border-bottom: 2px solid #ffffff; /* Alt çizgi ekler */
+            padding-bottom: 3px; /* Metin ile çizgi arasına 5 piksel boşluk ekler */
+            text-decoration: none; /* Varsa varsayılan alt çizgiyi kaldırır */
+        }        
+        ul {
+            list-style-type: none;
+            font-size: 16px;
+            margin-right: 50px;
+            padding: 0;
+            width: auto;
+            min-width: 100px;
+            max-width: 950px;
+            overflow: hidden;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            background-color: #ff5700;
+        }
+        @media only screen and (max-width: 850px) {
+            ul {
+                width: 100%; /* Ekran genişliğine göre 100% genişlik */
+                max-width: 380px; /* Maksimum genişlik sınırlamasını kaldır */
+                border-radius: 25px;
+                margin-top: 50px;
+                margin-right: 150px;
+                align-items: center;
+                text-align: center;
+            }
+        }
+        li {
+            float: left;
+            margin: 0;
+        }
+        ol {
+            float: right;
+            margin: 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 999;
+        }
+        @media only screen and (max-width: 850px) {
+            ol {
+                left: -27px;
+            }
+        }
+        li:last-child {
+            border-right: none;
+            margin: 0;
+        }
+        li a {
+            display: block;
+            color: #2f2e2e;
+            text-align: center;
+            padding: 10px 15px;
+            text-decoration: none;
+            margin: 0;
+        }
+        li a:hover {
+            color: #ffffff;
+            margin: 0;
+        }
+        .kutular {
+            width: 35px;
+            height: 35px;
+            font-size: 25px;
+            background-color: #ffffff; /* Örnek bir renk */
+            margin: 5px; /* Kutular arasında boşluk bırakmak için */
+            display: block; /* Kutuların yan yana gelmesini sağlar */
+            color: #2f2e2e;
+            text-align: center;
+            border-radius: 25px;
+            cursor: pointer;
+            table-layout:auto;
+        }
+        .marka {
+            width: 200px;
+            height: 35px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            font-size: 25px;
+            padding: 0 0;
+            background-color: #ff5700; /* Örnek bir renk */
+            display: block; /* Kutuların yan yana gelmesini sağlar */
+            color: #2f2e2e;
+            text-align: center;
+            margin-left: 50px;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            cursor: pointer;
+            z-index: 999;
+        }
+        @media only screen and (max-width: 850px) {
+            .marka {
+                margin-left: 100px;
+            }
+        }
+        .kutularContainer {
+            display: flex;
+            float: right;
+            flex-direction: row; /* Kutuları yatay yönde konumlandır */
+            position: fixed;
+            bottom: 15px;
+            right: 90px;
+        }
+        .kutular:hover {
+            background-color: #ffffff; /* Fare üzerine gelindiğinde arka plan rengini değiştir */
+            color: #ffffff;
+            cursor: pointer;
+            scale: 1.1;
+        }
+        .bolum {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0);
+            width: 1250px;
+            position: relative;
+            top: 50px;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+        @media only screen and (max-width: 850px) {
+            .bolum {
+                width: 800px;
+                height: auto;
+                left: 0;
+                top: 200px;
+                overflow: hidden;
+            }
+        }
+        .telif {
+            position: fixed;
+            color: #ffffff;
+            bottom: 3px;
+            left: 3px;
+        }
+        .projeler {
+            margin: 5px; /* Kutular arasında boşluk bırakmak için */
+            display: block; /* Kutuların yan yana gelmesini sağlar */
+            width: 300px;
+            height: 300px;
+            position: relative;
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            border:rgba(0, 0, 0, 0) solid ;
+        }
+        .projeler:hover {
+            border: #ff5700 solid;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        @media only screen and (max-width: 850px) {
+            .projeler {
+                height: 200px;
+                width: 200px;
+                font-size: 15px;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+            }
+        }
+        .projeFotos{
+            width: 300px;
+            height: 215px;
+            font-size: 25px;
+            margin: 0; /* Kutular arasında boşluk bırakmak için */
+            display: block; /* Kutuların yan yana gelmesini sağlar */
+            color: #2f2e2e;
+            text-align: center;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        .projelerContainer {
+            display: flex;
+            flex-direction: row;
+        }        
+        @media only screen and (max-width: 850px) {
+            .projelerContainer {
+                top: 450px;
+                display: block;
+                overflow: hidden;
+            }
+        }
+        #uyariArka {
+            z-index: 1001;
+            background-color: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+        }
+        #uyari {
+            z-index: 1002;
+            padding: 10px;
+            background-color: #ff5700;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300px;
+            height: 250px;
+            transform: translate(-50%, -50%);
+            border-radius: 25px;
+            text-align: center;
+            font-size: 25px;
+        }
+    </style>
+    <script>
+        function instagram() {
+            window.open('https://www.instagram.com/farmmodstv/', '_blank');
+        }
+        function facebook() {
+            window.open('https://www.facebook.com/farmmodstv/', '_blank');
+        }
+        function youtube() {
+            window.open('https://www.youtube.com/channel/UCZH3Gg1BfzzAwvSLj7ehGKw', '_blank');
+        }
+        function home() {
+            window.open('./', '_self');
+        }
+        function checkOrientation() {
+            if (1000 > window.innerWidth) {
+                // Dikey moddayız, uyarıyı göster
+                document.getElementById('uyariArka').style.display = 'block';
+            } else {
+                // Yatay moda geçildi, uyarıyı gizle
+                document.getElementById('uyariArka').style.display = 'none';
+            }
+        }
+
+        // Sayfa yüklendiğinde ve cihazın yönlendirmesi değiştiğinde kontrol et
+        window.addEventListener('load', checkOrientation);
+        window.addEventListener('orientationchange', checkOrientation);
+        window.addEventListener('resize', checkOrientation);
+        function anthem() {
+            window.open('\projects/Anthem_6x4_Pack.html', '_self');
+        }
+        function barrier() {
+            window.open('\projects/Barrier_Pack.html', '_self');
+        }
+        function pickup() {
+            window.open('\projects/86_Pickup_Revolution.html', '_self');
+        }
+        function police() {
+            window.open('\projects/policePickup.html', '_self');
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "https://www.farmmodstv.net/projects",
+            "url": "https://www.farmmodstv.net/projects",
+            "name": "Projects | Farm Mods TV",
+            "description": "New Mods & New Updates"
+        }
+    </script>
+</head>
+<body>
+    <ol>
+        <ul>
+            <li><a class="buSayfa" href="./projects">Projects</a></li>
+            <li><a href="mailto:farmmodstv@gmail.com">Contact</a></li>
+            <li><a href="./modStatesList">Mod States List</a></li>
+            <li><a href="./bugRepairList">Bug Repair List</a></li>
+            <li><a href="https://www.farming-simulator.com/mods.php?lang=en&org_id=229266" target="_blank">&#8599;ModHub</a></li>
+            <li><a href="https://linktr.ee/farmmodstv" target="_blank">&#8599;Linktr.ee</a></li>
+        </ul>
+    </ol>
+    <div class="marka" onclick="home()">Farm Mods TV</div>
+    <div id="uyariArka">
+        <div id="uyari">
+            Hello, currently, this page only operates in specific screen sizes. Thank you for your understanding.
+        </div>
+    </div>
+    <div class="bolum">
+        <div class="projelerContainer">
+            <div class="projeler" onclick="anthem()">
+                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('anthemPackFotos/screenshot4.jpg'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">Anthem 6x4 Pack</div>
+                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">New Mod</div>
+            </div>
+            <div class="projeler" onclick="barrier()">
+                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">Barrier Pack</div>
+                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">New Mod</div>
+            </div>
+            <div class="projeler" onclick="pickup()">
+                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('pickupRevolutionFotos/screenshot_1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">'86 Pickup Revolution</div>
+                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">New Mod</div>
+            </div>
+            <div class="projeler" onclick="police()">
+                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('policePickupFotos/screenshot_1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">2017 Pickup Police</div>
+                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">Big Update</div>
+            </div>
+        </div>
+        <div class="projelerContainer">
+            <div class="projeler" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
+                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Name 1</div>
+                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Type</div>
+            </div>
+            <div class="projeler" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
+                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Name 2</div>
+                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Type</div>
+            </div>
+            <div class="projeler" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
+                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Name 3</div>
+                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Type</div>
+            </div>
+            <div class="projeler" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
+                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Name 4</div>
+                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Type</div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="telif">
+            &copy; Farm Mods TV, Official Website
+        </div>
+        <div class="kutularContainer">
+            <div class="kutular" onclick="facebook()"><img src="genelFotolar/facebook.png" alt="Açıklama metni" width="35px" height="35px"></div>
+            <div class="kutular" onclick="instagram()"><img src="genelFotolar/instagram.png" alt="Açıklama metni" width="35px" height="35px"></div>            
+            <div class="kutular" onclick="youtube()"><img src="genelFotolar/youtube.png" alt="Açıklama metni" width="50px" height="35px"></div>
+        </div>
+    </footer>
+    <script data-name="BMC-Widget" data-cfasync="false"
+            src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="fmtv"
+            data-description="Support me on Buy me a coffee!" data-message=""
+            data-color="#FF5700" data-position="Right" data-x_margin="10" data-y_margin="10"
+            data-width="300px" data-height="300px" data-scale="1">
+    </script>
+</body>
+</html>
