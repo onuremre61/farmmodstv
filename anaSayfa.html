@@ -5,7 +5,17 @@
     <meta name="description" content="Official Farm Mods TV Website. Discover new mods and updates.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="og:title" content="Farm Mods TV">
-    <title>Home | Farm Mods TV</title>
+    <title id="page-title">Home | Farm Mods TV</title>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Home Page",
+            "url": "https://www.farmmodstv.net/",
+            "name": "Farm Mods TV",
+            "description": "Official Farm Mods TV Website"
+            "author": "Onur Emre",
+        }
+    </script>
     <link rel="icon" href="genelFotolar/FARM MODS TV.png" type="image/x-icon">
     <style>
         body {
@@ -55,7 +65,7 @@
                 text-align: center;
             }
         }
-        @media only screen and (max-width: 400px) {
+        @media only screen and (max-width: 420px) {
             ul {
                 width: 100%; /* Ekran genişliğine göre 100% genişlik */
                 max-width: 380px; /* Maksimum genişlik sınırlamasını kaldır */
@@ -66,7 +76,7 @@
                 left: 50%;
                 right: 50%;
                 align-items: center;
-                text-align: center;
+                text-align: left;
             }
         }
         li {
@@ -97,6 +107,7 @@
             padding: 10px 15px;
             text-decoration: none;
             margin: 0;
+            font-size: 17px;
         }
         li a:hover {
             color: #ffffff;
@@ -116,13 +127,13 @@
             table-layout: auto;
         }
         .marka {
-            width: 200px;
+            width: 220px;
             height: 35px;
             position: fixed;
             top: 0;
             left: 0;
-            font-size: 25px;
-            padding: 0 0;
+            font-size: 30px;
+            padding: 2px;
             background-color: #ff5700; /* Örnek bir renk */
             display: block; /* Kutuların yan yana gelmesini sağlar */
             color: #2f2e2e;
@@ -135,9 +146,11 @@
         @media only screen and (max-width: 940px) {
             .marka {
                 position: fixed;
-                top: 4%;
+                top: 15px;
                 left: 50%;
-                transform: translate(-80%, -50%);
+                margin-right: auto; /* Margin'ı otomatik olarak ayarla */
+                margin-left: auto; /* Margin'ı otomatik olarak ayarla */
+                transform: translate(-50%, -50%);
             }
         }
         
@@ -167,28 +180,6 @@
             position: fixed;
             bottom: 3px;
             left: 3px;
-        }
-        #uyariArka {
-            z-index: 1001;
-            background-color: rgba(0, 0, 0, 0.6);
-            position: absolute;
-            width: 100%;
-            height: 100%;
-
-        }
-        #uyari {
-            z-index: 1002;
-            padding: 10px;
-            background-color: #ff5700;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 300px;
-            height: 250px;
-            transform: translate(-50%, -50%);
-            border-radius: 25px;
-            text-align: center;
-            font-size: 25px;
         }
         #popup {
             display: none;
@@ -239,26 +230,11 @@
         function home() {
             window.open('./', '_self');
         }
-        function checkOrientation() {
-            if (window.innerHeight > window.innerWidth) {
-                // Dikey moddayız, uyarıyı göster
-                document.getElementById('uyariArka').style.display = 'block';
-            } else {
-                // Yatay moda geçildi, uyarıyı gizle
-                document.getElementById('uyariArka').style.display = 'none';
-            }
-        }
-
-        // Sayfa yüklendiğinde ve cihazın yönlendirmesi değiştiğinde kontrol et
-        window.addEventListener('load', checkOrientation);
-        window.addEventListener('orientationchange', checkOrientation);
-        window.addEventListener('resize', checkOrientation);
-
-
+        
         // Belirli bir trafik kaynağından gelen kullanıcılara pop-up göster
         // Belirli bir trafik kaynağından gelen kullanıcılara pop-up göster
         function showPopup() {
-            var referrer = document.referrer.toLowerCase();
+            let referrer = document.referrer.toLowerCase();
             if (referrer.includes('https://www.personal.farmmodstv.net/')) {
                 document.getElementById('popup').style.display = 'block';
             }
@@ -271,15 +247,6 @@
 
         // Sayfa yüklendiğinde kontrol et
         window.addEventListener('load', showPopup);
-    </script>
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Farm Mods TV",
-            "url": "https://www.farmmodstv.net/",
-            "name": "Farm Mods TV",
-            "description": "Official Farm Mods TV Website"
-        }
     </script>
 </head>
 <body>
@@ -297,11 +264,6 @@
     <div id="popup">
         <p>I created this website, and I am continuously updating it for a better user experience.</p>
         <button class="popupbut" onclick="closePopup()">Close</button>
-    </div>
-    <div id="uyariArka">
-        <div id="uyari">
-            Hello, this website is currently only operating in landscape mode for a while. Thank you for your understanding.
-        </div>
     </div>
     <div class="bolum">     
     </div>
