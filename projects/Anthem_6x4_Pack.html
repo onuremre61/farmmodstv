@@ -7,23 +7,15 @@
     <title>Anthem 6x4 Pack | Farm Mods TV</title>
     <link rel="icon" href="genelFotolar/FARM MODS TV.png" type="image/x-icon">
     <style>
+        .buSayfa {
+            color: #ffffff;
+        }
         body {
-            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/FARM MODS TV (1).png');
-            background-size: cover;
-            background-position: center;
-            padding: 10px;
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/FARM MODS TV (1).png'); /* Arka plan resmi belirtme */
+            background-size: cover; /* Resmi bölüm boyutuna sığacak şekilde ayarlama */
+            background-position: center; /* Resmi bölümün ortasına yerleştirme */
         }
-        @media only screen and (min-width: 851px) {
-            body {
-                overflow: hidden;
-            }
-        }
-        @media only screen and (max-width: 850px) {
-            body {
-                overflow: auto;
-            }
-        }
-        @media only screen and (max-width: 850px) {
+        @media only screen and (max-width: 940px) {
             body, html {
                 overflow-x: hidden;
             }
@@ -31,14 +23,22 @@
         body::-webkit-scrollbar {
             width: 10px; /* Genişlik */
         }
+        @media only screen and (max-width: 450px) {
+            visibility: hidden;
+        }
         body::-webkit-scrollbar-thumb {
             background-color: #ff5700;
             border-radius: 6px; /* Kenar yarıçapı */
         }
+        @media only screen and (max-width: 450px) {
+            visibility: hidden;
+        }
         body::-webkit-scrollbar-track {
             background-color: #2f2e2e; /* Kaydırma çubuğu yolu rengi */
         }
-
+        @media only screen and (max-width: 450px) {
+            visibility: hidden;
+        }
         ul {
             list-style-type: none;
             font-size: 16px;
@@ -52,7 +52,7 @@
             border-bottom-right-radius: 25px;
             background-color: #ff5700;
         }
-        @media only screen and (max-width: 850px) {
+        @media only screen and (max-width: 940px) {
             ul {
                 width: 100%; /* Ekran genişliğine göre 100% genişlik */
                 max-width: 600px; /* Maksimum genişlik sınırlamasını kaldır */
@@ -66,7 +66,7 @@
                 text-align: center;
             }
         }
-        @media only screen and (max-width: 400px) {
+        @media only screen and (max-width: 450px) {
             ul {
                 width: 100%; /* Ekran genişliğine göre 100% genişlik */
                 max-width: 380px; /* Maksimum genişlik sınırlamasını kaldır */
@@ -92,7 +92,7 @@
             right: 0;
             z-index: 999;
         }
-        @media only screen and (max-width: 850px) {
+        @media only screen and (max-width: 940px) {
             ol {
                 left: -27px;
             }
@@ -108,6 +108,7 @@
             padding: 10px 15px;
             text-decoration: none;
             margin: 0;
+            font-size: 17px;
         }
         li a:hover {
             color: #ffffff;
@@ -127,13 +128,13 @@
             table-layout:auto;
         }
         .marka {
-            width: 200px;
+            width: 220px;
             height: 35px;
             position: fixed;
             top: 0;
             left: 0;
-            font-size: 25px;
-            padding: 0 0;
+            font-size: 30px;
+            padding: 2px;
             background-color: #ff5700; /* Örnek bir renk */
             display: block; /* Kutuların yan yana gelmesini sağlar */
             color: #2f2e2e;
@@ -164,8 +165,13 @@
             scale: 1.1;
         }
         .bolum {
-            padding: 300px;
+            padding: 8%;
+            margin-top: 100px;
+            background-color: #f1f1f1;
             text-align: center;
+            background-color: rgba(0, 0, 0, 0);
+            background-size: cover; /* Resmi bölüm boyutuna sığacak şekilde ayarlama */
+            background-position: center; /* Resmi bölümün ortasına yerleştirme */
         }
         .telif {
             position: fixed;
@@ -185,30 +191,21 @@
             border-radius: 25px;
             table-layout:auto;
             position: relative;
-            top: -250px;
-            left: -285px;
+            top: -150px;
+            left: 0;
         }
         @media only screen and (max-width: 850px) {
             .detayKutusu {
                 font-size: 15px;
-                width: 370px;
-                height: 170px;
-                top: -180px;
-                margin-left: 190px;
-                margin-top: -10px;
-            }
-        }
-        @media only screen and (max-width: 450px) {
-            .detayKutusu {
-                font-size: 15px;
                 width: 350px;
                 height: 185px;
-                top: -180px;
-                margin-left: 5px;
-                margin-top: 20px;
+                top: 85px;
+                left: 50%;
+                margin-right: auto; /* Margin'ı otomatik olarak ayarla */
+                margin-left: auto; /* Margin'ı otomatik olarak ayarla */
+                transform: translate(-50%, -50%);
             }
         }
-
         .detayKutusuYazilari {
             margin: 10px;
             font-size: 20px;
@@ -219,7 +216,6 @@
                 font-size: 15px;
             }
         }
-        
         .detayResimi {
             width: 444px;
             height: 250px;
@@ -228,7 +224,7 @@
             margin: 5px; /* Kutular arasında boşluk bırakmak için */
             display: block; /* Kutuların yan yana gelmesini sağlar */
             color: #2f2e2e;
-            text-align: left;
+            text-align: center;
             border-radius: 25px;
             table-layout: auto;
         }
@@ -238,38 +234,44 @@
                 height: 208px;
             }
         }
-
         .detayResimiContainer {
             display: flex;
             float: right;
             flex-direction: row; /* Kutuları yatay yönde konumlandır */
             position: relative;
-            top: -800px;
-            left: 300px;
+            top: -570px;
+            right: -680px;
+            transform: translate(-50%, -50%);
         }
         @media only screen and (max-width: 850px) {
             .detayResimiContainer {
                 display: block;
                 flex-direction: column;
-                margin-top: 640px;
-                left: 85px;
+                left: 50%;
+                top: 220px;
+                margin-right: auto; /* Margin'ı otomatik olarak ayarla */
+                margin-left: auto; /* Margin'ı otomatik olarak ayarla */
+                transform: translate(-38%, -50%);
             }
         }
-
         .detayResimiContainer2 {
             display: flex;
             float: right;
             flex-direction: row; /* Kutuları yatay yönde konumlandır */
             position: relative;
-            top: -780px;
-            left: 300px;
+            top: -550px;
+            right: -680px;
+            transform: translate(-50%, -50%);
         }
         @media only screen and (max-width: 850px) {
             .detayResimiContainer2 {
                 display: block;
                 flex-direction: column;
-                margin-top: 1045px;
-                left: 85px;
+                left: 50%;
+                top: 220px;
+                margin-right: auto; /* Margin'ı otomatik olarak ayarla */
+                margin-left: auto; /* Margin'ı otomatik olarak ayarla */
+                transform: translate(-38%, -50%);
             }
         }
         .detayKutusuBaslik {
@@ -291,6 +293,9 @@
         @media only screen and (max-width: 850px) {
             .detayKutusuYazilariAciklama {
                 visibility: hidden;
+                margin-right: auto; /* Margin'ı otomatik olarak ayarla */
+                margin-left: auto; /* Margin'ı otomatik olarak ayarla */
+                transform: translate(-50%, -50%);
             }
         }
         
@@ -331,7 +336,7 @@
             window.open('https://www.farmmodstv.net/', '_self');
         }
         function modDetay() {
-            window.open('https://www.farmmodstv.net/modStatesList', '_self');
+            window.open('https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=278941&title=fs2022', '_self');
         }
         document.addEventListener("scroll", function() {
             let menu = document.querySelector('.ol');
@@ -348,7 +353,7 @@
 <body>
     <ol>
         <ul>
-            <li><a href="https://www.farmmodstv.net/projects">Projects</a></li>
+            <li><a class="buSayfa" href="https://www.farmmodstv.net/projects">Projects</a></li>
             <li><a href="mailto:farmmodstv@gmail.com">Contact</a></li>
             <li><a href="https://www.farmmodstv.net/modStatesList">Mod States List</a></li>
             <li><a href="https://www.farmmodstv.net/bugRepairList">Bug Repair List</a></li>
@@ -362,7 +367,7 @@
             <h1 class="detayKutusuBaslik" >Anthem 6x4 Pack</h1>
             <p class="detayKutusuYazilari">Project Type: New Mod</p>
             <p class="detayKutusuYazilari">Create Date: 12.01.2024</p>
-            <p class="detayKutusuYazilari">Estimated Publish Date: March 2024</p>
+            <p class="detayKutusuYazilari">Publish Date: Late February 2024</p>
             <p class="detayKutusuYazilariAciklama">- Cabin Options<br>
                 - Hood Mirror Option<br>
                 - Wheel Option<br>
@@ -375,7 +380,7 @@
                 - Engine Power: 425 - 505 HP<br>
                 - Max Speed: 80 KM/H<br>
             </p>
-            <div class="detayKutusuYazilariModDetayButton" onclick="modDetay()">Check Mod States</div>
+            <div class="detayKutusuYazilariModDetayButton" onclick="modDetay()">Download Mod</div>
         </div>
         <div class="detayResimiContainer">
             <img class="detayResimi" src="anthemPackFotos/screenshot4.jpg" alt="Anthem 6x4 Pack">
