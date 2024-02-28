@@ -7,10 +7,18 @@
     <title id="page-title">Bug Repair | Farm Mods TV</title>
     <link rel="icon" href="genelFotolar/FARM MODS TV.png" type="image/x-icon">
     <style>
+        .buSayfa {
+            color: #ffffff;
+        }
         body {
             background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/FARM MODS TV (1).png'); /* Arka plan resmi belirtme */
             background-size: cover; /* Resmi bölüm boyutuna sığacak şekilde ayarlama */
             background-position: center; /* Resmi bölümün ortasına yerleştirme */
+        }
+        @media only screen and (max-width: 940px) {
+            body, html {
+                overflow-x: hidden;
+            }
         }
         body::-webkit-scrollbar {
             width: 10px; /* Genişlik */
@@ -21,12 +29,6 @@
         }
         body::-webkit-scrollbar-track {
             background-color: #2f2e2e; /* Kaydırma çubuğu yolu rengi */
-        }
-        .buSayfa {
-            color: #ffffff;
-            border-bottom: 2px solid #ffffff; /* Alt çizgi ekler */
-            padding-bottom: 3px; /* Metin ile çizgi arasına 5 piksel boşluk ekler */
-            text-decoration: none; /* Varsa varsayılan alt çizgiyi kaldırır */
         }
         ul {
             list-style-type: none;
@@ -41,14 +43,32 @@
             border-bottom-right-radius: 25px;
             background-color: #ff5700;
         }
-        @media only screen and (max-width: 850px) {
+        @media only screen and (max-width: 940px) {
             ul {
                 width: 100%; /* Ekran genişliğine göre 100% genişlik */
-                max-width: 500px; /* Maksimum genişlik sınırlamasını kaldır */
+                max-width: 600px; /* Maksimum genişlik sınırlamasını kaldır */
                 border-radius: 25px;
                 margin-top: 50px;
-                margin-right: 150px;
+                margin-right: auto; /* Margin'ı otomatik olarak ayarla */
+                margin-left: auto;
+                left: 50%;
+                right: 50%;
                 align-items: center;
+                text-align: center;
+            }
+        }
+        @media only screen and (max-width: 400px) {
+            ul {
+                width: 100%; /* Ekran genişliğine göre 100% genişlik */
+                max-width: 380px; /* Maksimum genişlik sınırlamasını kaldır */
+                border-radius: 25px;
+                margin-top: 50px;
+                margin-right: auto; /* Margin'ı otomatik olarak ayarla */
+                margin-left: auto;
+                left: 50%;
+                right: 50%;
+                align-items: center;
+                text-align: center;
             }
         }
         li {
@@ -61,6 +81,12 @@
             position: fixed;
             top: 0;
             right: 0;
+            z-index: 999;
+        }
+        @media only screen and (max-width: 940px) {
+            ol {
+                left: -27px;
+            }
         }
         li:last-child {
             border-right: none;
@@ -73,9 +99,9 @@
             padding: 10px 15px;
             text-decoration: none;
             margin: 0;
+            font-size: 17px;
         }
         li a:hover {
-
             color: #ffffff;
             margin: 0;
         }
@@ -93,13 +119,13 @@
             table-layout:auto;
         }
         .marka {
-            width: 200px;
+            width: 220px;
             height: 35px;
             position: fixed;
             top: 0;
             left: 0;
-            font-size: 25px;
-            padding: 0 0;
+            font-size: 30px;
+            padding: 2px;
             background-color: #ff5700; /* Örnek bir renk */
             display: block; /* Kutuların yan yana gelmesini sağlar */
             color: #2f2e2e;
@@ -108,6 +134,16 @@
             border-bottom-left-radius: 25px;
             border-bottom-right-radius: 25px;
             cursor: pointer;
+        }
+        @media only screen and (max-width: 940px) {
+            .marka {
+                position: fixed;
+                top: 15px;
+                left: 50%;
+                margin-right: auto; /* Margin'ı otomatik olarak ayarla */
+                margin-left: auto; /* Margin'ı otomatik olarak ayarla */
+                transform: translate(-50%, -50%);
+            }
         }
         .kutularContainer {
             display: flex;
@@ -145,6 +181,7 @@
         @media only screen and (max-width: 850px) {
         .usttanBosluk {
             width: 650px;
+            margin-top: 50px;
         }
         }
     </style>
