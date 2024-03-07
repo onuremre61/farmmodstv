@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="og:title" content="Farm Mods TV">
     <title id="page-title">All Links | Farm Mods TV</title>
-    <link rel="icon" href="genelFotolar/FARM MODS TV.png" type="image/x-icon">
+    <link rel="icon" href="genelFotolar/favicon.png" type="image/x-icon">
     <style>
         body {
             background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url('genelFotolar/FARM MODS TV (1).png'); /* Arka plan resmi belirtme */
@@ -33,7 +33,7 @@
             list-style-type: none;
             font-size: 30px;
             left: 50%;
-            top: 55%;
+            top: 55vh;
             margin: 2%;
             padding: 2%;
             width: auto;
@@ -43,6 +43,7 @@
             border-radius: 25px;
             background-color: #ff5700;
             transform: translate(-50%, -50%);
+            box-shadow: 0 0 50px 0 #ff5700;
         }
 
         @media only screen and (max-width: 940px) {
@@ -54,7 +55,7 @@
                 margin-left: auto;
                 left: 50%;
                 right: 50%;
-                top: 50%;
+                top: clamp(15vh, 55%, 55vh);
                 align-items: center;
                 text-align: center;
                 padding: 2%;
@@ -70,7 +71,7 @@
                 margin-left: auto;
                 left: 50%;
                 right: 50%;
-                top: 45%;
+                top: clamp(15vh, 55%, 55vh);
                 align-items: center;
                 text-align: left;
                 padding: 2%;
@@ -87,13 +88,12 @@
         ul li:hover {
             background-color: #ff5700;
             border: 1px solid #2f2e2e;
+            animation: moveRight 2s ease-in-out infinite alternate;
         }
-        
         ul li:last-child {
             border-right: none;
             margin: 0;
         }
-
         ul li a {
             display: block;
             color: white;
@@ -104,7 +104,6 @@
             font-size: 30px;
             font-family: 'Aptos', sans-serif;
         }
-
         ul li a:hover {
             margin: 4px;        
         }
@@ -114,7 +113,7 @@
             position: fixed;
             top: 4%;
             left: 52%;
-            font-size: 40px;
+            font-size: clamp(20px, 50vw, 40px);
             padding: 4px;
             background-color: #ff5700; /* Örnek bir renk */
             display: block; /* Kutuların yan yana gelmesini sağlar */
@@ -129,8 +128,6 @@
                 position: fixed;
                 top: 4%;
                 left: 52%;
-                margin-right: auto; /* Margin'ı otomatik olarak ayarla */
-                margin-left: auto; /* Margin'ı otomatik olarak ayarla */
                 transform: translate(-50%, -50%);
             }
         }
@@ -156,16 +153,18 @@
             list-style-type: none;
             font-size: 30px;
             left: 52%;
-            top: 13%;
+            top: 13vh;
             width: auto;
             height: auto;
             max-height: 95px;
-            min-width: 150px;
+            min-width: 180px;
             max-width: 950px;
             overflow: hidden;
             border-radius: 25px;
             background-color: #ff5700;
             transform: translate(-50%, -50%);
+            justify-items: center;
+            text-align: center;
         }
         @media only screen and (max-width: 940px) {
             .socials {
@@ -177,7 +176,7 @@
         .socialsIcons {
             width: 35px;
             height: 35px;
-            margin: 5px;
+            margin: 5px 11px;
         }
         .socialsIcons:hover {
             scale: 1.1;
@@ -186,7 +185,7 @@
     </style>
     <script>
         function home() {
-            window.location.href = "./anaSayfa";
+            window.location.href = "./";
         }
     </script>
 </head>
@@ -199,7 +198,7 @@
                         <path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" d="M21 1.5H3A1.5 1.5 0 0 0 1.5 3v18A1.5 1.5 0 0 0 3 22.5h8.5v-8h-2v-3h2v-2a4 4 0 0 1 4-4h3v3h-3a1 1 0 0 0-1 1v2h4l-.5 3h-3.5v8H21a1.5 1.5 0 0 0 1.5-1.5V3A1.5 1.5 0 0 0 21 1.5Z" data-name="<Path>" class="colorStroke303c42 svgStroke"></path>
                     </g>
                 </svg>
-                Facebook
+                
             </a>
         </li>
 
@@ -212,7 +211,7 @@
                         <circle cx="18" cy="5" r=".5" data-name="<Path>" class="color000000 svgShape"></circle>
                     </g>
                 </svg>
-                Instagram
+                
             </a>
         </li>
 
@@ -228,7 +227,7 @@
                         </g>
                     </g>
                 </svg>
-                YouTube
+                
             </a>
         </li>
 
@@ -240,13 +239,13 @@
                         <path d="M3.5 2.5v15h5v3l3-3h6l4-4v-11h-18zM9.5 6.5v6M15.5 6.5v6" data-name="<Path>" class="color000000 svgShape"></path>
                     </g>
                 </svg>
-                Twitch
+                
             </a>
         </li>
 
     </div>
     <ul>
-        <li><a href="https://www.farming-simulator.com/mods.php?lang=en&country=us&title=fs2022&filter=org&org_id=229266" target="_blank">FS22 ModHub</a></li>
+        <li><a href="./my-modhub-pages" target="_blank">ModHub Pages</a></li>
         <li><a href="./modStatesList">Mod States List</a></li>
         <li><a href="./bugRepairList">Bug Repair List</a></li>
         <li><a href="https://www.kingmods.net/en/profile/farm-mods-tv" target="_blank">KingMods.net Page</a></li>
@@ -259,7 +258,7 @@
 </div>
 <footer>
     <div class="telif">
-        &copy; Farm Mods TV, Official Website
+        Farm Mods TV&trade;, Official Website
     </div>
 </footer>
 </body>
