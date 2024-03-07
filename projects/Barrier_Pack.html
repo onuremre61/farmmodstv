@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta name="description" content="Barrier Pack Mod for Farming Simulator 22 by Farm Mods TV">
     <meta name="viewport" content="width=100px, initial-scale=1.0">
-    <title>Barrier Pack | Farm Mods TV</title>
-    <link rel="icon" href="genelFotolar/FARM MODS TV.png" type="image/x-icon">
+    <title id="page-title">Barrier Pack | Farm Mods TV</title>
+    <link rel="icon" href="genelFotolar/favicon.png" type="image/x-icon">
     <style>
         .buSayfa {
             color: #ffffff;
+        }
+        @media only screen and (max-width: 940px) {
+            .buSayfa {
+                display: none;
+            }
         }
         body {
             background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/FARM MODS TV (1).png'); /* Arka plan resmi belirtme */
             background-size: cover; /* Resmi bölüm boyutuna sığacak şekilde ayarlama */
             background-position: center; /* Resmi bölümün ortasına yerleştirme */
+            overflow-y: hidden;
         }
         @media only screen and (max-width: 940px) {
             body, html {
@@ -90,7 +96,6 @@
             position: fixed;
             top: 0;
             right: 0;
-            z-index: 999;
         }
         @media only screen and (max-width: 940px) {
             ol {
@@ -109,6 +114,11 @@
             text-decoration: none;
             margin: 0;
             font-size: 17px;
+        }
+        @media only screen and (max-width: 940px) {
+            li a {
+                font-size: 18px;
+            }
         }
         li a:hover {
             color: #ffffff;
@@ -158,6 +168,11 @@
             bottom: 15px;
             right: 90px;
         }
+        @media only screen and (max-width: 940px) {
+            .kutularContainer {
+                left: 3px;
+            }
+        }
         .kutular:hover {
             background-color: #ffffff; /* Fare üzerine gelindiğinde arka plan rengini değiştir */
             color: #ffffff;
@@ -174,10 +189,18 @@
             background-position: center; /* Resmi bölümün ortasına yerleştirme */
         }
         .telif {
+            color: white;
             position: fixed;
-            color: #ffffff;
             bottom: 3px;
             left: 3px;
+            width: 250px;
+        }
+        @media only screen and (max-width: 940px) {
+            .telif {
+                bottom: 2px;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
         }
         .detayKutusu {
             width: 550px;
@@ -192,7 +215,7 @@
             table-layout:auto;
             position: relative;
             top: -150px;
-            left: 0px;
+            left: -100px;
         }
         @media only screen and (max-width: 850px) {
             .detayKutusu {
@@ -240,7 +263,7 @@
             flex-direction: row; /* Kutuları yatay yönde konumlandır */
             position: relative;
             top: -570px;
-            right: -680px;
+            right: -570px;
             transform: translate(-50%, -50%);
         }
         @media only screen and (max-width: 850px) {
@@ -260,7 +283,7 @@
             flex-direction: row; /* Kutuları yatay yönde konumlandır */
             position: relative;
             top: -550px;
-            right: -680px;
+            right: -570px;
             transform: translate(-50%, -50%);
         }
         @media only screen and (max-width: 850px) {
@@ -353,12 +376,11 @@
 <body>
     <ol>
         <ul>
-            <li><a class="buSayfa" href="https://www.farmmodstv.net/projects">Projects</a></li>
+            <li><a class="buSayfa" href="https://www.farmmodstv.net/projects">Mods</a></li>
             <li><a href="mailto:farmmodstv@gmail.com">Contact</a></li>
             <li><a href="https://www.farmmodstv.net/modStatesList">Mod States List</a></li>
             <li><a href="https://www.farmmodstv.net/bugRepairList">Bug Repair List</a></li>
-            <li><a href="https://www.farming-simulator.com/mods.php?lang=en&org_id=229266" target="_blank">&#8599;ModHub</a></li>
-            <li><a href="https://linktr.ee/farmmodstv" target="_blank">&#8599;Linktr.ee</a></li>
+            <li><a href="https://www.farmmodstv.net/my-modhub-pages">ModHub</a></li>
         </ul>
     </ol>
     <div class="marka" onclick="home()">Farm Mods TV</div>
@@ -382,7 +404,7 @@
     </div>
     <footer>
         <div class="telif">
-            &copy; Farm Mods TV, Official Website
+            Farm Mods TV&trade;, Official Website
         </div>
         
         <div class="kutularContainer">
