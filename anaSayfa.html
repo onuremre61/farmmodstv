@@ -12,12 +12,12 @@
             "@type": "Home Page",
             "url": "https://www.farmmodstv.net/",
             "name": "Farm Mods TV",
-            "description": "Official Farm Mods TV Website"
-            "author": "Onur Emre",
+            "description": "Official Farm Mods TV Website",
+            "author": "Onur Emre"
         }
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1779010088219076"
-     crossorigin="anonymous"></script>
+            crossorigin="anonymous"></script>
     <link rel="icon" href="genelFotolar/FARM MODS TV.png" type="image/x-icon">
     <style>
         body {
@@ -46,17 +46,19 @@
             margin-right: 50px;
             padding: 0;
             width: auto;
-            min-width: 100px;
+            min-width: 50px;
             max-width: 950px;
             overflow: hidden;
             border-bottom-left-radius: 25px;
             border-bottom-right-radius: 25px;
             background-color: #ff5700;
+            align-items: center;
+            text-align: center;
         }
         @media only screen and (max-width: 940px) {
             ul {
                 width: 100%; /* Ekran genişliğine göre 100% genişlik */
-                max-width: 600px; /* Maksimum genişlik sınırlamasını kaldır */
+                max-width: 380px; /* Maksimum genişlik sınırlamasını kaldır */
                 border-radius: 25px;
                 margin-top: 50px;
                 margin-right: auto; /* Margin'ı otomatik olarak ayarla */
@@ -65,6 +67,7 @@
                 right: 50%;
                 align-items: center;
                 text-align: center;
+                justify-items: center;
             }
         }
         @media only screen and (max-width: 420px) {
@@ -78,7 +81,7 @@
                 left: 50%;
                 right: 50%;
                 align-items: center;
-                text-align: left;
+                text-align: center;
             }
         }
         li {
@@ -86,16 +89,16 @@
             margin: 0;
         }
         ol {
-            float: right;
+            float: left;
             margin: 0;
             position: fixed;
             top: 0;
             right: 0;
-            z-index: 999;
         }
         @media only screen and (max-width: 940px) {
             ol {
                 left: -27px;
+                max-height: 20px;
             }
         }
         li:last-child {
@@ -106,10 +109,17 @@
             display: block;
             color: #2f2e2e;
             text-align: center;
+            align-items: center;
+            justify-items: center;
             padding: 10px 15px;
             text-decoration: none;
             margin: 0;
             font-size: 17px;
+        }
+        @media only screen and (max-width: 940px) {
+            li a {
+                font-size: 10px;
+            }
         }
         li a:hover {
             color: #ffffff;
@@ -149,13 +159,12 @@
             .marka {
                 position: fixed;
                 top: 15px;
-                left: 50%;
+                left: 51%;
                 margin-right: auto; /* Margin'ı otomatik olarak ayarla */
                 margin-left: auto; /* Margin'ı otomatik olarak ayarla */
                 transform: translate(-50%, -50%);
             }
         }
-        
         .kutularContainer {
             display: flex;
             float: right;
@@ -163,6 +172,11 @@
             position: fixed;
             bottom: 15px;
             right: 90px;
+        }
+        @media only screen and (max-width: 940px) {
+            .kutularContainer {
+                left: 3px;
+            }
         }
         .kutular:hover {
             background-color: #ffffff; /* Fare üzerine gelindiğinde arka plan rengini değiştir */
@@ -178,10 +192,24 @@
             background-size: cover; /* Resmi bölüm boyutuna sığacak şekilde ayarlama */
             background-position: center; /* Resmi bölümün ortasına yerleştirme */
         }
+        @media only screen and (max-width: 940px) {
+            .bolum {
+                top: 85px;
+            }
+        }
         .telif {
+            color: white;
             position: fixed;
             bottom: 3px;
             left: 3px;
+            width: 250px;
+        }
+        @media only screen and (max-width: 940px) {
+            .telif {
+                bottom: 2px;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
         }
         #popup {
             display: none;
@@ -258,8 +286,7 @@
             <li><a href="mailto:farmmodstv@gmail.com">Contact</a></li>
             <li><a href="./modStatesList">Mod States List</a></li>
             <li><a href="./bugRepairList">Bug Repair List</a></li>
-            <li><a href="https://www.farming-simulator.com/mods.php?lang=en&org_id=229266" target="_blank">&#8599;ModHub</a></li>
-            <li><a href="https://linktr.ee/farmmodstv" target="_blank">&#8599;Linktr.ee</a></li>
+            <li><a href="./my-modhub-pages">ModHub</a></li>
         </ul>
     </ol>
     <div class="marka" onclick="home()">Farm Mods TV</div>
@@ -271,7 +298,7 @@
     </div>
     <footer>
         <div class="telif">
-            &copy; Farm Mods TV, Official Website
+            Farm Mods TV&trade;, Official Website
         </div>
         <div class="kutularContainer">
             <div class="kutular" onclick="facebook()"><img src="genelFotolar/facebook.png" alt="Farm Mods TV Facebook" width="35px" height="35px"></div>
