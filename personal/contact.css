@@ -1,0 +1,245 @@
+body { padding: 50px; overflow-x:hidden; background-color: #2f2e2e; justify-content: center; width: 100%; height: 100%}
+
+/* Only edit this if you know what you are doing! */
+img { position: absolute; display: block; margin: 0; border: none; padding: 0; }
+
+/* Only edit this if you know what you are doing! */
+div { position: absolute; }
+
+#menu {
+	position: absolute;
+	width: 100%;
+	max-width: 1280px;
+	height: 55px;
+	border-radius: 25px;
+	background: #FF5700;
+	left: 50%;
+	transform: translate(-50%,-20%);
+	z-index: 999;
+}
+#marka {
+	position: absolute;
+	color: #2f2e2e;
+	font-size: 35px;
+	top: 15%;
+	left: 95px;
+	transform: translate(-50%,0%);
+	cursor: pointer;
+}
+#menuCont {
+	top: 15%;
+	right: 0;
+	width: 300px;
+	height: 55px;
+	transform: translate(-15%,-15%);
+	align-items: center;
+}
+#menuTusPro {
+	font-family: Serif, sans-serif;
+	font-size: 22px;
+	cursor: pointer;
+	text-align: center;
+	left: -38%;
+	transform: translate(100%,0%);
+}
+#menuTusPro:hover {
+	color: white;
+}
+#menuTusCont{
+	font-family: Serif, sans-serif;
+	font-size: 22px;
+	cursor: pointer;
+	text-align: center;
+	left: -10%;
+	transform: translate(100%,0%);
+	margin-left: 5px;
+}
+#menuTusCont:hover{
+	color: white;
+}
+#menuTusAbo {
+	font-family: Serif, sans-serif;
+	font-size: 22px;
+	cursor: pointer;
+	text-align: center;
+	left: 55%;
+	transform: translate(-50%,0%);
+	margin-left: -12px;
+}
+#menuTusAbo:hover {
+	color: white;
+}
+#menuTusLin {
+	font-family: Serif, sans-serif;
+	font-size: 22px;
+	cursor: pointer;
+	text-align: center;
+	left: 100%;
+	transform: translate(-100%,0%);
+	margin-left: -12px;
+}
+#menuTusLin:hover {
+	color: white;
+}
+#modlarcon {
+	position: relative;
+	padding: 15px;
+	margin-bottom: 85px;
+	display: block;
+	width: 1024px;
+	height: 500px;
+	top: 330px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #ffffff;
+}
+#formName {
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%,0%);
+	font-size: 25px;
+}
+#formMail {
+	position: absolute;
+	top: 45px;
+	left: 50%;
+	transform: translate(-50%,0%);
+	font-size: 25px;
+}
+#formSubject {
+	position: absolute;
+	top: 90px;
+	left: 50%;
+	transform: translate(-50%,0%);
+	font-size: 25px;
+}
+#formMessage {
+	position: absolute;
+	height: 100px;
+	top: 135px;
+	left: 50%;
+	transform: translate(-50%,0%);
+	font-size: 25px;
+}
+#formBut {
+	position: absolute;
+	width: 100px;
+	top: 250px;
+	left: 50%;
+	transform: translate(-50%,0%);
+	font-size: 25px;
+	background-color: #FF5700;
+	border: 1px solid #FF5700;
+}
+#formBut:hover {
+	color: #FF5700;
+	background-color: white;
+}
+
+/* Mobil Versiyon */
+
+/* Mobil Versiyon */
+
+#markaMob {
+	display: none;
+	position: absolute;
+	color: #2f2e2e;
+	background-color: #FF5700;
+	font-size: 40px;
+	width: 200px;
+	border-radius: 25px;
+	top: -30px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	text-align: center;
+	z-index: 999;
+}
+#menuContMob {
+	display: none;
+	position: absolute;
+	background-color: #FF5700;
+	font-size: 25px;
+	border-radius: 25px;
+	width: 350px;
+	height: 90px;
+	top: 50px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	text-align: center;
+	z-index: 999;
+}
+#menuMobTusPro {
+	display: none;
+	font-family: Serif, sans-serif;
+	font-size: 22px;
+	cursor: pointer;
+	text-align: center;
+	top: 15%;
+	left: 1%;
+	transform: translate(0%,0%);
+}
+#menuMobTusPro:hover {
+	color: white;
+}
+#menuMobTusCont{
+	display: none;
+	font-family: Serif, sans-serif;
+	font-size: 22px;
+	cursor: pointer;
+	text-align: center;
+	top: 15%;
+	left: 50%;
+	transform: translate(-50%,0%);
+	margin-left: 5px;
+}
+#menuMobTusCont:hover{
+	color: white;
+}
+#menuMobTusAbo {
+	display: none;
+	font-family: Serif, sans-serif;
+	font-size: 22px;
+	cursor: pointer;
+	text-align: center;
+	top: 15%;
+	left: 100%;
+	transform: translate(-100%,0%);
+	margin-left: -12px;
+}
+#menuMobTusAbo:hover {
+	color: white;
+}
+#menuMobTusLin {
+	display: none;
+	font-family: Serif, sans-serif;
+	font-size: 22px;
+	cursor: pointer;
+	text-align: center;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%,0%);
+	margin-left: 5px;
+}
+#menuMobTusLin:hover {
+	color: white;
+}
+
+/* Ayarlama Fonksiyonu */
+
+@media only screen and (max-width: 800px) {
+	#markaMob, #menuContMob, #selamlamaMob, #ikinciSatirMob, #ilkSatirMob, #menuMobTusAbo, #menuMobTusCont, #menuMobTusPro, #menuMobTusLin {
+		display: block; /* Ekran genişliği 800 pikselden küçükse görünür yap */
+	}
+
+	#marka, #menuCont, #selamlama {
+		display: none; /* Ekran genişliği 800 pikselden küçükse gizli yap */
+	}
+}
+@media only screen and (max-width: 800px) {
+	#menu {
+		background-color: rgba(0,0,0,0);
+	}
+}
+
+/* Ayarlama Fonksiyonu */
