@@ -1,0 +1,278 @@
+body { padding: 50px; overflow-x:hidden; background-color: rgba(24,188,150,1); justify-content: center; width: 100%; height: 100%}
+
+/* Only edit this if you know what you are doing! */
+img { position: absolute; display: block; margin: 0; border: none; padding: 0; }
+
+/* Only edit this if you know what you are doing! */
+div { position: absolute; }
+
+#menu {
+	width: 200px;
+	height: 60vh;
+	background: rgba(44,62,80,1);
+	color: white;
+	padding-top: 45px;
+	position: fixed;
+	top: 50%;
+	border-radius: 25px;
+	transform: translate(0%, -50%);
+	@media only screen and (max-width: 950px) {
+		width: clamp(940px, 50%, 1980px);
+		max-width: initial;
+		height: 50px;
+		left: -25px;
+		top: 7%;
+		transform: translate(0%, -50%);
+
+	}
+}
+#menu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#menu li {
+	padding: 13px;
+	transition: padding-left 0.3s ease; /* Animasyon geçiş efekti ekle */
+	@media only screen and (max-width: 950px) {
+		display: none;
+	}
+}
+
+#menu a {
+	border-radius: 25px;
+	border-bottom: 1px solid #2f2e2e; /* İhtiyaca göre kenar çizgileri eklenebilir */
+	color: white;
+	font-size: 20px;
+	display: block;
+	left: 22px;
+	padding-bottom: 5px;
+	padding-left: 8px;
+	padding-right: 5px;
+}
+#menu a:hover {
+	/* background-color: #555;  Fare üzerine gelindiğinde arka plan rengini değiştir */
+	color: white;
+	border-bottom: 1px solid white;
+	cursor: pointer;
+	left: 15px;
+	.arrow {
+		rotate: -45deg;
+		opacity: 1;
+	}
+}
+#marka {
+	color: white;
+	font-size: 38px;
+	text-align: center;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	cursor: pointer;
+	margin-bottom: 500px;
+}
+#marka2 {
+	color: white;
+	font-size: 20px;
+	text-align: center;
+}
+#hakkindaKutu {
+	position: absolute;
+	left: 58%;
+	top: 50%;
+	width: clamp(100px, 71%, 2000px);
+	height: 480px;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	font-size: 15px;
+	font-family: Serif, sans-serif;
+}
+#profilResmi {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: clamp(100px, 34.5%, 2000px);
+	height: 380px;
+	transform: translate(10%, -50%);
+	background-image: url('profil_resmi.jpg');
+	background-size: cover; /* Resmi bölüm boyutuna sığacak şekilde ayarlama */
+	background-position: center;
+}
+#aciklama {
+	position: absolute;
+	left: 1.5%;
+	top: 45%;
+	width: clamp(100px, 60%, 2000px);
+	height: 300px;
+	transform: translate(62.5%, -50%);
+	font-size: 20px;
+	text-align: justify;
+}
+#aboutme {
+	position: absolute;
+	top: -10%;
+	font-size: 50px;
+	font-family: Serif, sans-serif;
+	font-weight: bold;
+}
+
+/* Mobil Versiyon */
+
+/* Mobil Versiyon */
+
+#markaMob {
+	display: none;
+	position: absolute;
+	color: #2f2e2e;
+	background-color: #FF5700;
+	font-size: 40px;
+	width: 200px;
+	border-radius: 25px;
+	top: -30px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	text-align: center;
+	z-index: 999;
+}
+#menuContMob {
+	display: none;
+	position: absolute;
+	background-color: #FF5700;
+	font-size: 25px;
+	border-radius: 25px;
+	width: 350px;
+	height: 90px;
+	top: 50px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	text-align: center;
+	z-index: 999;
+}
+#menuMobTusPro {
+	display: none;
+	font-family: Serif, sans-serif;
+	font-size: 22px;
+	cursor: pointer;
+	text-align: center;
+	top: 15%;
+	left: 1%;
+	transform: translate(0%,0%);
+}
+#menuMobTusPro:hover {
+	color: white;
+}
+#menuMobTusCont{
+	display: none;
+	font-family: Serif, sans-serif;
+	font-size: 22px;
+	cursor: pointer;
+	text-align: center;
+	top: 15%;
+	left: 50%;
+	transform: translate(-50%,0%);
+	margin-left: 5px;
+}
+#menuMobTusCont:hover{
+	color: white;
+}
+#menuMobTusAbo {
+	display: none;
+	font-family: Serif, sans-serif;
+	font-size: 22px;
+	cursor: pointer;
+	text-align: center;
+	top: 15%;
+	left: 100%;
+	transform: translate(-100%,0%);
+	margin-left: -12px;
+}
+#menuMobTusAbo:hover {
+	color: white;
+}
+#menuMobTusLin {
+	display: none;
+	font-family: Serif, sans-serif;
+	font-size: 22px;
+	cursor: pointer;
+	text-align: center;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%,0%);
+	margin-left: 5px;
+}
+#menuMobTusLin:hover {
+	color: white;
+}
+#hakkindaKutuMob {
+	display: none;
+	position: absolute;
+	left: 50%;
+	top: 90%;
+	width: 400px;
+	height: 1200px;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	font-size: 20px;
+	font-family: Serif, sans-serif;
+}
+#profilResmiMob {
+	position: absolute;
+	left: 50%;
+	top: 20%;
+	width: 350px;
+	height: 350px;
+	transform: translate(-50%, -60%);
+	background-image: url('profil_resmi.jpg');
+	background-size: cover; /* Resmi bölüm boyutuna sığacak şekilde ayarlama */
+	background-position: center;
+}
+#aciklamaMob {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 350px;
+	height: 300px;
+	transform: translate(-50%, -50%);
+	text-align: justify;
+}
+#aboutmeMob {
+	position: absolute;
+	font-size: 40px;
+	font-family: Serif, sans-serif;
+	font-weight: bold;
+	width: 180px;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+/* Ayarlama Fonksiyonu */
+
+@media only screen and (max-width: 800px) {
+	#markaMob, #menuContMob, #selamlamaMob, #ikinciSatirMob, #ilkSatirMob, #menuMobTusAbo, #menuMobTusCont, #menuMobTusPro, #menuMobTusLin, #hakkindaKutuMob {
+		display: block; /* Ekran genişliği 800 pikselden küçükse görünür yap */
+	}
+
+	#marka, #menuCont, #selamlama, #hakkindaKutu {
+		display: none; /* Ekran genişliği 800 pikselden küçükse gizli yap */
+		
+	}
+}
+@media only screen and (max-width: 800px) {
+	body {
+		overflow-x: auto;
+	}
+
+	body {
+		overflow-x: hidden;
+	}
+}
+@media only screen and (max-width: 800px) {
+	#menu {
+		background-color: rgba(0,0,0,0);
+	}
+}
+
+/* Ayarlama Fonksiyonu */
