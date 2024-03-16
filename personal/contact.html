@@ -10,15 +10,13 @@
 		<script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=6"></script>
 		<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 		<style>
-			.menuCont {
-				display: flex;
-				justify-content: space-between;
-			}
 			body {
 				overflow-x: hidden;
 			}
-			.menuTusCont {
-				color: #fff;
+			.arrow {
+				opacity: 1;
+				transition: rotate 0.35s;
+				font-weight: bold;
 			}
 		</style>
 		<script>
@@ -26,37 +24,45 @@
 		</script>
 	</head>
 	<body id="body" class="body">
-	<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
-		<div id="menu" class="menu">
-			<div id="marka" class="marka" onclick="window.location.href='./anaSayfa';">Onur Emre</div>
-			<div id="markaMob" class="markaMob" onclick="window.location.href='./anaSayfa';">Onur Emre</div>
-			<div id="menuCont" class="menuCont">
-				<div id="menuTusPro" class="menuTusPro" onclick="window.location.href='./projects';">Projects</div>
-				<div id="menuTusCont" class="menuTusCont" onclick="window.location.href='./contact';">Contact</div>
-				<div id="menuTusAbo" class="menuTusAbo" onclick="window.location.href='./aboutMe';">About</div>
-				<div id="menuTusLin" class="menuTusLin" onclick="window.open('https://www.linkedin.com/in/onur-emre-yilmaz-aa13692a1/', '_blank');">&#8599;LinkedIn</div>
-			</div>
-			<div id="menuContMob" class="menuMob">
-				<div id="menuMobTusPro" onclick="window.location.href='./projects';">Projects</div>
-				<div id="menuMobTusCont" onclick="window.location.href='./contact';">Contact</div>
-				<div id="menuMobTusAbo" onclick="window.location.href='./about';">About</div>
-				<div id="menuMobTusLin" class="menuTusLin" onclick="window.open('https://www.linkedin.com/in/onur-emre-yilmaz-aa13692a1/', '_blank');">&#8599;LinkedIn</div>
-			</div>
-		</div>
-		<div id="modlarcon">
-			<form action="https://send.pageclip.co/nCR4RWMqkqZlfSSkpUNjwZDuSA2uUYlM/PersonalWebsite" class="pageclip-form" method="post">
-				<!-- Replace these inputs with your own. Make sure they have a "name" attribute! -->
-				<input id="formName" type="text" name="name" required placeholder="Your Name"/>
-				<!-- <input id="formMail" type="email" name="email" placeholder="Your E-Mail"/> -->
-				<input id="formSubject" type="text" name="email" required placeholder="Subject"/>
-				<input id="formMessage" type="text" name="email" required placeholder="Description"/>
+	<form action="https://send.pageclip.co/nCR4RWMqkqZlfSSkpUNjwZDuSA2uUYlM/PersonalContactForm" class="pageclip-form" method="post">
+		<!-- Replace these inputs with your own. Make sure they have a "name" attribute! -->
 
-				<!-- This button will have a loading spinner. Keep the inner span for best results. -->
-				<button id="formBut" type="submit" class="pageclip-form__submit">
-					<span>Send</span>
-				</button>
-			</form>
-		</div>
+		<!-- It looks like you are creating a contact form. These email and subject fields are special -->
+		<!-- See https://pageclip.co/docs#special-fields for more info -->
+		<input type="email" name="email" />
+		<input type="text" name="name" />
+		<input type="text" name="subject" />
+
+		<!-- This button will have a loading spinner. Keep the inner span for best results. -->
+		<button type="submit" class="pageclip-form__submit">
+			<span>Send</span>
+		</button>
+	</form>
+	<div class="menu" id="menu">
+		<ul>
+			<div id="marka" onclick="window.location.href='./';">Onur Emre</div>
+			<li><a onclick="window.location.href='./projects';"><div>&#62;</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My Projects</a></li>
+			<li><a onclick="window.location.href='./contact';"><div>&#62;</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact</a></li>
+			<li><a onclick="window.location.href='./aboutMe';"><div>&#62;</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About</a></li>
+			<li id="marka2">My Accounts</li>
+			<li><a onclick="window.open('https://www.linkedin.com/in/onur-emre-yilmaz-aa13692a1/', '_blank')"><div class="arrow">&#62;</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LinkedIn</a></li>
+			<li><a onclick="window.open('https://www.instagram.com/benonuremre/', '_blank')"><div class="arrow">&#62;</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instagram</a></li>
+			<li><a onclick="window.open('https://www.facebook.com/benonuremre/', '_blank')"><div class="arrow">&#62;</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Facebook</a></li>
+			<li><a onclick="window.open('https://www.youtube.com/@onuremre61', '_blank')"><div class="arrow">&#62;</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YouTube</a></li>
+		</ul>
+		<svg onclick="toggleMenu()" id="menuTus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75Zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75ZM1.75 12h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Z"></path></svg>
+	</div>
+	<div class="mobileMenu" id="mobileMenu">
+		<ul>
+			<li><a onclick="window.location.href='./projects'">My Projects</a></li>
+			<li><a onclick="window.location.href='./contact';">Contact</a></li>
+			<li><a onclick="window.location.href='./aboutMe';">About</a></li>
+			<li><a onclick="window.open('https://www.linkedin.com/in/onur-emre-yilmaz-aa13692a1/', '_blank')">LinkedIn</a></li>
+			<li><a onclick="window.open('https://www.instagram.com/benonuremre/', '_blank')">Instagram</a></li>
+			<li><a onclick="window.open('https://www.facebook.com/benonuremre/', '_blank')">Facebook</a></li>
+			<li><a onclick="window.open('https://www.youtube.com/@onuremre61', '_blank')">YouTube</a></li>
+		</ul>
+	</div>
 		<footer>
 			
 		</footer>
