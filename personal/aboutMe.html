@@ -18,13 +18,20 @@
 		}
 	</style>
 	<script>
-		
+		function toggleMenu() {
+			let menu = document.getElementById("mobileMenu");
+			if (menu.style.display === "block") {
+				menu.style.display = "none";
+			} else {
+				menu.style.display = "block";
+			}
+		}
 	</script>
 </head>
 <body id="body" class="body">
 <div class="menu" id="menu">
 	<ul>
-		<div id="marka" onclick="window.location.href='./anaSayfa';">Onur Emre</div>
+		<div id="marka" onclick="window.location.href='./';">Onur Emre</div>
 		<li><a onclick="window.location.href='./projects';"><div>&#62;</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My Projects</a></li>
 		<li><a onclick="window.location.href='./contact';"><div>&#62;</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact</a></li>
 		<li><a onclick="window.location.href='./aboutMe';"><div>&#62;</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About</a></li>
@@ -34,15 +41,18 @@
 		<li><a onclick="window.open('https://www.facebook.com/benonuremre/', '_blank')"><div class="arrow">&#62;</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Facebook</a></li>
 		<li><a onclick="window.open('https://www.youtube.com/@onuremre61', '_blank')"><div class="arrow">&#62;</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YouTube</a></li>
 	</ul>
+	<svg onclick="toggleMenu()" id="menuTus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75Zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75ZM1.75 12h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Z"></path></svg>
 </div>
-<div id="menu2" class="menu">
-	<div id="markaMob" class="markaMob" onclick="window.location.href='./';">Onur Emre</div>
-	<div id="menuContMob" class="menuMob">
-		<div id="menuMobTusPro" onclick="window.location.href='./projects';">Projects</div>
-		<div id="menuMobTusCont" onclick="window.location.href='./contact';">Contact</div>
-		<div id="menuMobTusAbo" onclick="window.location.href='./about';">About</div>
-		<div id="menuMobTusLin" class="menuTusLin" onclick="window.open('https://www.linkedin.com/in/onur-emre-yilmaz-aa13692a1/', '_blank');">&#8599;LinkedIn</div>
-	</div>
+<div class="mobileMenu" id="mobileMenu">
+	<ul>
+		<li><a onclick="window.location.href='./projects'">My Projects</a></li>
+		<li><a onclick="window.location.href='./contact';">Contact</a></li>
+		<li><a onclick="window.location.href='./aboutMe';">About</a></li>
+		<li><a onclick="window.open('https://www.linkedin.com/in/onur-emre-yilmaz-aa13692a1/', '_blank')">LinkedIn</a></li>
+		<li><a onclick="window.open('https://www.instagram.com/benonuremre/', '_blank')">Instagram</a></li>
+		<li><a onclick="window.open('https://www.facebook.com/benonuremre/', '_blank')">Facebook</a></li>
+		<li><a onclick="window.open('https://www.youtube.com/@onuremre61', '_blank')">YouTube</a></li>
+	</ul>
 </div>
 <div id="hakkindaKutu">
 	<div id="profilResmi">
@@ -54,21 +64,12 @@
 		Hello, I am Onur Emre, residing in the region known as Cappadocia in Turkey. Since 2020, I have been creating content on YouTube, and in 2021, I began modding for the Farming Simulator series. During this time, I have honed my skills in 3D modeling. Currently, I have developed over 70 mods, 11 of which are cross-platform. As of the moment I am writing this, my mods have surpassed 2.9 million downloads on the official ModHub. I am actively improving my skills in the "HTML5" and Unity.
 		<br> <br>
 		Also I am a technology enthusiast and a computer game aficionado, closely following the latest developments in the field.
+		<div class="cv" id="cv"><a onclick="window.location.href='./cv.html';">
+			View My CV</a>
+		</div>
 	</div>
 </div>
-<div id="hakkindaKutuMob">
-	<div id="profilResmiMob">
 
-	</div>
-	<div id="aciklamaMob">
-		<div id="aboutmeMob">About Me</div>
-		<br><p>
-		Hello, I am Onur Emre, residing in the region known as Cappadocia in Turkey. Since 2020, I have been creating content on YouTube, and in 2021, I began modding for the Farming Simulator series. During this time, I have honed my skills in 3D modeling. Currently, I have developed over 70 mods, 11 of which are cross-platform. As of the moment I am writing this, my mods have surpassed 2.9 million downloads on the official ModHub. I am actively improving my skills in the "HTML5" and Unity.
-		</p><br><p>
-		Also I am a technology enthusiast and a computer game aficionado, closely following the latest developments in the field.
-		</p>
-	</div>
-</div>
 <footer>
 
 </footer>
