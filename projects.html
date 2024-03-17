@@ -4,16 +4,11 @@
     <meta charset="UTF-8">
     <meta name="description" content="New Mods & New Updates">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">Projects | Farm Mods TV</title>
+    <title id="page-title">Mods | Farm Mods TV</title>
     <link rel="icon" href="genelFotolar/favicon.png" type="image/x-icon">
     <style>
         .buSayfa {
             color: #ffffff;
-            @media only screen and (max-width: 940px) {
-                .buSayfa {
-                    display: none;
-                }
-            }
         }
         body {
             background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/FARM MODS TV (1).png'); /* Arka plan resmi belirtme */
@@ -22,7 +17,7 @@
         }
         @media only screen and (max-width: 940px) {
             body, html {
-                overflow-x: hidden;
+                overflow-y: hidden;
             }
         }
         body::-webkit-scrollbar {
@@ -51,7 +46,7 @@
         @media only screen and (max-width: 940px) {
             ul {
                 width: 100%; /* Ekran genişliğine göre 100% genişlik */
-                max-width: 600px; /* Maksimum genişlik sınırlamasını kaldır */
+                max-width: 370px; /* Maksimum genişlik sınırlamasını kaldır */
                 border-radius: 25px;
                 margin-top: 50px;
                 margin-right: auto; /* Margin'ı otomatik olarak ayarla */
@@ -99,7 +94,7 @@
         }
         li a {
             display: block;
-            color: #2f2e2e;
+            color: #000;
             text-align: center;
             padding: 10px 15px;
             text-decoration: none;
@@ -122,7 +117,7 @@
             background-color: #ffffff; /* Örnek bir renk */
             margin: 5px; /* Kutular arasında boşluk bırakmak için */
             display: block; /* Kutuların yan yana gelmesini sağlar */
-            color: #2f2e2e;
+            color: #000000;
             text-align: center;
             border-radius: 25px;
             cursor: pointer;
@@ -146,9 +141,10 @@
             cursor: pointer;
             z-index: 999;
         }
-        @media only screen and (max-width: 850px) {
+        @media only screen and (max-width: 940px) {
             .marka {
-                margin-left: 100px;
+                left: 50%;
+                transform: translate(-65%, 0);
             }
         }
         .kutularContainer {
@@ -158,6 +154,11 @@
             position: fixed;
             bottom: 15px;
             right: 90px;
+        }
+        @media only screen and (max-width: 940px) {
+            .kutularContainer {
+                left: 3px;
+            }
         }
         .kutular:hover {
             background-color: #ffffff; /* Fare üzerine gelindiğinde arka plan rengini değiştir */
@@ -173,21 +174,31 @@
             top: 50px;
             left: 50%;
             transform: translate(-50%, 0);
+            padding-bottom: 55px;
         }
-        @media only screen and (max-width: 850px) {
+        @media only screen and (max-width: 940px) {
             .bolum {
                 width: 800px;
+                max-width: 400px;
                 height: auto;
-                left: 0;
-                top: 200px;
-                overflow: hidden;
+                left: 50%;
+                overflow-y: hidden;
+                transform: translate(-50%, 0%);
             }
         }
         .telif {
+            color: white;
             position: fixed;
-            color: #ffffff;
             bottom: 3px;
             left: 3px;
+            width: 250px;
+        }
+        @media only screen and (max-width: 940px) {
+            .telif {
+                bottom: 2px;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
         }
         .projeler {
             margin: 5px; /* Kutular arasında boşluk bırakmak için */
@@ -205,14 +216,12 @@
             border-radius: 25px;
             cursor: pointer;
         }
-        @media only screen and (max-width: 850px) {
+        @media only screen and (max-width: 940px) {
             .projeler {
-                height: 200px;
-                width: 200px;
-                font-size: 15px;
-                position: fixed;
-                left: 0;
-                bottom: 0;
+                width: 50%;
+                height: 300px;
+                left: 100%;
+                transform: translate(-50%, 20%);
             }
         }
         .projeFotos{
@@ -228,41 +237,19 @@
         }
         .projelerContainer {
             display: flex;
-            flex-direction: row;
+            flex-direction: row; /* Kutuları yatay yönde konumlandır */
         }        
-        @media only screen and (max-width: 850px) {
+        @media only screen and (max-width: 940px) {
             .projelerContainer {
-                top: 450px;
-                display: block;
-                overflow: hidden;
+                flex-direction: column;
+                left: 100%;
+                transform: translate(-50%, 0%);
             }
         }
         .projeBaslık {
             text-align: center;
             justify-items: center;
-            float: initial;
-        }
-        #uyariArka {
-            z-index: 1001;
-            background-color: rgba(0, 0, 0, 0.6);
-            position: absolute;
-            width: 100%;
-            height: 100%;
-
-        }
-        #uyari {
-            z-index: 1002;
-            padding: 10px;
-            background-color: #ff5700;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 300px;
-            height: 250px;
-            transform: translate(-50%, -50%);
-            border-radius: 25px;
-            text-align: center;
-            font-size: 25px;
+            align-items: center;
         }
     </style>
     <script>
@@ -278,34 +265,35 @@
         function home() {
             window.open('./', '_self');
         }
-        function checkOrientation() {
-            if (1000 > window.innerWidth) {
-                // Dikey moddayız, uyarıyı göster
-                document.getElementById('uyariArka').style.display = 'block';
-                setTimeout(function(){
-                    window.location.href = "https://www.farmmodstv.net/";
-                }, 2500);
-            } else {
-                // Yatay moda geçildi, uyarıyı gizle
-                document.getElementById('uyariArka').style.display = 'none';
-            }
-        }
-
-        // Sayfa yüklendiğinde ve cihazın yönlendirmesi değiştiğinde kontrol et
-        window.addEventListener('load', checkOrientation);
-        window.addEventListener('orientationchange', checkOrientation);
-        window.addEventListener('resize', checkOrientation);
         function anthem() {
-            window.open('\projects/Anthem_6x4_Pack.html', '_self');
+            window.open('https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=278941&title=fs2022', '_blank');
         }
-        function barrier() {
-            window.open('\projects/Barrier_Pack.html', '_self');
+        function pinnacle() {
+            window.open('https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=261452&title=fs2022', '_blank');
         }
         function pickup() {
             window.open('\projects/86_Pickup_Revolution.html', '_self');
         }
         function police() {
-            window.open('\projects/policePickup.html', '_self');
+            window.open('https://www.farming-simulator.com/mod.php?lang=en&country=cz&mod_id=260176&title=fs2022', '_blank');
+        }
+        function servicepack() {
+            window.open('https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=271482&title=fs2022', '_blank');
+        }
+        function vtdrive() {
+            window.open('https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=263466&title=fs2022', '_blank');
+        }
+        function decoratives() {
+            window.open('https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=278641&title=fs2022', '_blank');
+        }
+        function transmitter() {
+            window.open('https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=277460&title=fs2022', '_blank');
+        }
+        function mantanker() {
+            window.open('https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=279086&title=fs2022', '_blank');
+        }
+        function placelight() {
+            window.open('https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=275031&title=fs2022', '_blank');
         }
     </script>
     <script type="application/ld+json">
@@ -321,7 +309,7 @@
 <body>
     <ol>
         <ul>
-            <li><a class="buSayfa" href="./projects">Projects</a></li>
+            <li><a class="buSayfa" href="./projects">Mods</a></li>
             <li><a href="mailto:farmmodstv@gmail.com">Contact</a></li>
             <li><a href="./modStatesList">Mod States List</a></li>
             <li><a href="./bugRepairList">Bug Repair List</a></li>
@@ -329,50 +317,97 @@
         </ul>
     </ol>
     <div class="marka" onclick="home()">Farm Mods TV</div>
-    <div id="uyariArka">
-        <div id="uyari">
-            Hello, currently, this page only operates in specific screen sizes. Thank you for your understanding. <br><br>You will be redirected to the homepage shortly.
-        </div>
-    </div>
     <div class="bolum">
-        <div class="projelerContainer">
-            <div class="projeler" onclick="anthem()">
+        <div class="projelerContainer" id="ilkModlar">
+            <div class="projeler" onclick="anthem()" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
                 <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('anthemPackFotos/screenshot4.jpg'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/screenshot4.jpg'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
                 <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">Anthem 6x4 Pack</div>
                 <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">FS22 Mod</div>
             </div>
-            <div class="projeler" onclick="barrier()">
+            <div class="projeler" onclick="pinnacle()" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
                 <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">Barrier Pack</div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/screenshot_pinnacle.jpg'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">Pinnacle 6x4 Tanker</div>
                 <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">FS22 Mod</div>
             </div>
-            <div class="projeler" onclick="pickup()">
+            <div class="projeler" onclick="pickup()" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
                 <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('pickupRevolutionFotos/screenshot_1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/screenshot_1.jpg'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">'86 Pickup Revolution</div>
+                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">FS22 Mod</div>
+            </div>
+            <div class="projeler" onclick="police()" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
+                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/screenshotPolice.jpg'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">2017 Pickup Police</div>
+                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">FS22 Mod</div>
+            </div>
+        </div>
+        <div class="projelerContainer" id="ilkModlar2">
+            <div class="projeler" onclick="servicepack()" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
+                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/screenshot0.jpg'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Service Vehicles Pack</div>
+                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">FS22 Mod</div>
+            </div>
+            <div class="projeler" onclick="vtdrive()" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
+                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/screenshot1.jpg'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">X7 VT-Drive Track</div>
+                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">FS22 Mod</div>
+            </div>
+            <div class="projeler" onclick="decoratives()" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
+                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/screenshot_decoratives.jpg'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Placeable Decoratives</div>
+                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">FS22 Mod</div>
+            </div>
+            <div class="projeler" onclick="transmitter()" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
+                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/screenshot_transmitter.jpg'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Transmitter Towers</div>
+                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">FS22 Mod</div>
+            </div>
+        </div>
+        <div class="projelerContainer" id="ikinciModlar">
+            <div class="projeler" onclick="mantanker()">
+                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/screenshot_mantanker.jpg'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">Man Agro-Truck Pack</div>
+                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">FS22 Mod</div>
+            </div>
+            <div class="projeler" onclick="placelight()">
+                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/screenshot_placelight.jpg'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 29px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">Placeable Traffic Light</div>
+                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">FS22 Mod</div>
+            </div>
+            <div class="projeler" onclick="pickup()"  >
+                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/FARM MODS TV (1).png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
                 <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">'86 Pickup Revolution</div>
                 <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">FS22 Mod</div>
             </div>
             <div class="projeler" onclick="police()">
                 <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('policePickupFotos/screenshot_1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/FARM MODS TV (1).png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
                 <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">2017 Pickup Police</div>
                 <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">FS22 Mod</div>
             </div>
         </div>
-        <div class="projelerContainer">
-            <div class="projeler" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
+        <div class="projelerContainer" id="ikinciModlar2">
+            <div class="projeler" onclick="servicepack()" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
                 <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Name 1</div>
-                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Type</div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/FARM MODS TV (1).png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Service Vehicles Pack</div>
+                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">FS22 Mod</div>
             </div>
-            <div class="projeler" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
+            <div class="projeler" onclick="vtdrive()" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
                 <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Name 2</div>
-                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Type</div>
+                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/FARM MODS TV (1).png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
+                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">X7 VT-Drive Track</div>
+                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">FS22 Mod</div>
             </div>
             <div class="projeler" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
                 <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
@@ -390,7 +425,7 @@
     </div>
     <footer>
         <div class="telif">
-            &copy; Farm Mods TV, Official Website
+            Farm Mods TV&trade;, Official Website
         </div>
         <div class="kutularContainer">
             <div class="kutular" onclick="facebook()"><img src="genelFotolar/facebook.png" alt="Açıklama metni" width="35px" height="35px"></div>
