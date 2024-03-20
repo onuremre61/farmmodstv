@@ -27,7 +27,8 @@ div { position: absolute; }
 	border-radius: 25px;
 	transform: translate(0%, -50%);
 	@media only screen and (max-width: 800px) {
-		height: clamp(50vh, 65%, 120vh);
+		position: absolute;
+		height: 65vh;
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%, -50%);
@@ -37,6 +38,9 @@ div { position: absolute; }
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	@media only screen and (max-width: 800px) {
+		padding-top: 10px;
+	}
 }
 #menu li {
 	padding: 13px;
