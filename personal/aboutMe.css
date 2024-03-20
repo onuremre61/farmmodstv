@@ -88,7 +88,7 @@ div { position: absolute; }
 		width: 240px;
 		border-radius: 25px;
 		top: 50%;
-		left: -17pt;
+		left: 0;
 		transform: translate(0, -50%);
 		text-align: center;
 		z-index: 999;
@@ -172,20 +172,20 @@ div { position: absolute; }
 }
 #cv {
 	position: absolute;
-	bottom: -50pt;
-	right: 2pt;
+	bottom: -75pt;
+	right: -25pt;
 	transform: translate(-50%, -50%);
 	font-size: 20px;
 	font-family: Serif, sans-serif;
 	text-decoration: none;
 	@media only screen and (max-width: 1200px) {
-		top: 100%;
+		bottom: 100%;
 		right: -10%;
 		transform: translate(-50%, -50%);
 	}
 	@media only screen and (max-width: 820px) {
-		right: 20%;
-		top: 225%;
+		right: 16%;
+		bottom: -160%;
 		transform: translate(-50%, -50%);
 	}
 }
