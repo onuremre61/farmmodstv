@@ -9,7 +9,7 @@
 	<script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=6"></script>
 	<style>
 		body {
-			overflow-x: hidden;
+			overflow-x: hidden !important;
 		}
 		.arrow {
 			opacity: 1;
@@ -18,12 +18,24 @@
 		}
 	</style>
 	<script>
+		window.addEventListener("orientationchange", function() {
+			// Tarayıcının dönme işlemini engelle
+			if (window.screen.orientation.angle !== 0) {
+				//alert("Lütfen cihazınızı dikey konumda kullanınız.");
+				// Dikey konuma dön
+				setTimeout(function() {
+					window.screen.orientation.lock('portrait');
+				}, 0);
+			}
+		});
 		function toggleMenu() {
 			let menu = document.getElementById("mobileMenu");
 			if (menu.style.display === "block") {
 				menu.style.display = "none";
+				document.body.style.overflow = "visible"; // Sayfanın overflow özelliğini tekrar görünür hale getir
 			} else {
 				menu.style.display = "block";
+				document.body.style.overflow = "hidden"; // Sayfanın overflow özelliğini gizle
 			}
 		}
 		document.addEventListener('click', function(event) {
@@ -31,12 +43,14 @@
 			let menuTus = document.getElementById('menuTus');
 			if (!menu.contains(event.target) && event.target !== menuTus) {
 				menu.style.display = "none";
+				document.body.style.overflow = "visible"; // Sayfanın overflow özelliğini tekrar görünür hale getir
 			}
 		});
 		document.addEventListener('DOMContentLoaded', function() {
 			let menu = document.getElementById("mobileMenu");
 			{
 				menu.style.display = "none";
+				document.body.style.overflow = "visible"; // Sayfanın overflow özelliğini tekrar görünür hale getir
 			}
 		});		
 	</script>
@@ -69,21 +83,16 @@
 		</ul>
 	</div>
 	<div id="hakkindaKutu">
-		<div id="profilResmi">
-		
-	</div>
-	<div id="aciklama">
-		<div id="aboutme">About Me</div>
-		<br> <br>
-		<p>Hello, I am Onur Emre, residing in the region known as Cappadocia in Turkey. Since 2020, I have been creating content on YouTube, and in 2021, I began modding for the Farming Simulator series. During this time, I have honed my skills in 3D modeling. Currently, I have developed over 70 mods, 11 of which are cross-platform. As of the moment I am writing this, my mods have surpassed 2.9 million downloads on the official ModHub. I am actively improving my skills in the "HTML5" and Unity.</p>
-		<br>
-		<p>Also I am a technology enthusiast and a computer game aficionado, closely following the latest developments in the field.</p>
-		<div class="cv" id="cv"><a onclick="window.location.href='./cv.html';">
-			View My CV</a>
+		<div id="profilResmi"></div>
+		<div id="aciklama">
+			<p id="aboutme">About Me</p>
+			<br>
+			<p>Hello, I am Onur Emre, residing in the region known as Cappadocia in Turkey. Since 2020, I have been creating content on YouTube, and in 2021, I began modding for the Farming Simulator series. During this time, I have honed my skills in 3D modeling. Currently, I have developed over 70 mods, 11 of which are cross-platform. As of the moment I am writing this, my mods have surpassed 2.9 million downloads on the official ModHub. I am actively improving my skills in the "HTML5" and Unity.</p>
+			<br>
+			<p>Also I am a technology enthusiast and a computer game aficionado, closely following the latest developments in the field.</p>
+			<p class="cv" id="cv" onclick="window.location.href='./cv.html';">View My CV</p>
 		</div>
 	</div>
-</div>
-
 <footer>
 
 </footer>
