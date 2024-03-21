@@ -8,13 +8,10 @@ body {
 		max-width: 100%;
 	}
 }
-
 /* Only edit this if you know what you are doing! */
 img { position: absolute; display: block; margin: 0; border: none; padding: 0; }
-
 /* Only edit this if you know what you are doing! */
 div { position: absolute; }
-
 #menu {
 	width: 220px;
 	background: rgba(44,62,80,1);
@@ -32,14 +29,12 @@ div { position: absolute; }
 		top: 7%;
 		transform: translate(-50%, -50%);
 	}
-
 }
 #menu ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
 }
-
 #menu li {
 	padding: 13px;
 	transition: padding-left 0.3s ease; /* Animasyon geçiş efekti ekle */
@@ -47,7 +42,6 @@ div { position: absolute; }
 		display: none;
 	}
 }
-
 #menu a {
 	border-radius: 25px;
 	border-bottom: 1px solid #2f2e2e; /* İhtiyaca göre kenar çizgileri eklenebilir */
