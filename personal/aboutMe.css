@@ -1,11 +1,11 @@
-body { 
+body {
 	padding: 50px;
-	overflow-x: hidden; 
+	overflow-x: hidden;
 	background-color: rgba(24,188,150,1);
 	justify-content: center;
 	width: 100%;
 	height: 100%;
-	
+
 	@media only screen and (max-width: 500px) {
 		max-width: 100%;
 	}
@@ -102,14 +102,15 @@ div { position: absolute; }
 		max-width: 90%;
 		min-height: 1050px;
 		height: auto;
-		top: 475pt;
+		top: 482pt;
 	}
 }
 #profilResmi {
 	position: absolute;
 	left: 0;
 	top: 50%;
-	width: clamp(100px, 34.5%, 2000px);
+	width: clamp(100px, 35%, 2000px);
+	
 	height: 380px;
 	transform: translate(10%, -50%);
 	background-image: url('profil_resmi.jpg');
@@ -163,14 +164,16 @@ div { position: absolute; }
 	font-family: Serif, sans-serif;
 	text-decoration: none;
 	@media only screen and (max-width: 1200px) {
-		bottom: 100%;
+		bottom: 92%;
 		right: -10%;
 		transform: translate(-50%, -50%);
+		padding-top: -25px;
 	}
 	@media only screen and (max-width: 820px) {
 		right: 16%;
 		bottom: -160%;
 		transform: translate(-50%, -50%);
+		padding-top: 50px;
 	}
 }
 #cv:hover {
