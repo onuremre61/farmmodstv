@@ -1,151 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-bs-theme="light" lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="New Mods & New Updates">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">Mods | Farm Mods TV</title>
-    <link rel="icon" href="genelFotolar/favicon.png" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Mods - Farm Mods TV</title>
+    <link rel="icon" href="genelFotolar/favicon.png" type="image/x-icon" style="border-radius: 25px">
+    <link rel="stylesheet" href="assets/css/ana.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/ana3.css">
+    <link rel="stylesheet" href="assets/css/ana2.css">
     <style>
-        .buSayfa {
-            color: #ffffff;
-        }
-        body {
-            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/FARM MODS TV (1).png'); /* Arka plan resmi belirtme */
-            background-size: cover; /* Resmi bölüm boyutuna sığacak şekilde ayarlama */
-            background-position: center; /* Resmi bölümün ortasına yerleştirme */
-        }
-        @media only screen and (max-width: 940px) {
-            body, html {
-                overflow-y: hidden;
-            }
-        }
-        body::-webkit-scrollbar {
-            width: 10px; /* Genişlik */
-        }
-        body::-webkit-scrollbar-thumb {
-            background-color: #ff5700;
-            border-radius: 6px; /* Kenar yarıçapı */
-        }
-        body::-webkit-scrollbar-track {
-            background-color: #2f2e2e; /* Kaydırma çubuğu yolu rengi */
-        }
-        ul {
-            list-style-type: none;
-            font-size: 16px;
-            margin-right: 50px;
-            padding: 0;
-            width: auto;
-            min-width: 100px;
-            max-width: 950px;
-            overflow: hidden;
-            border-bottom-left-radius: 25px;
-            border-bottom-right-radius: 25px;
-            background-color: #ff5700;
-        }
-        @media only screen and (max-width: 940px) {
-            ul {
-                width: 100%; /* Ekran genişliğine göre 100% genişlik */
-                max-width: 370px; /* Maksimum genişlik sınırlamasını kaldır */
-                border-radius: 25px;
-                margin-top: 50px;
-                margin-right: auto; /* Margin'ı otomatik olarak ayarla */
-                margin-left: auto;
-                left: 50%;
-                right: 50%;
-                align-items: center;
-                text-align: center;
-            }
-        }
-        @media only screen and (max-width: 400px) {
-            ul {
-                width: 100%; /* Ekran genişliğine göre 100% genişlik */
-                max-width: 380px; /* Maksimum genişlik sınırlamasını kaldır */
-                border-radius: 25px;
-                margin-top: 50px;
-                margin-right: auto; /* Margin'ı otomatik olarak ayarla */
-                margin-left: auto;
-                left: 50%;
-                right: 50%;
-                align-items: center;
-                text-align: center;
-            }
-        }
-        li {
-            float: left;
-            margin: 0;
-        }
-        ol {
-            float: right;
-            margin: 0;
-            position: fixed;
-            top: 0;
-            right: 0;
-            z-index: 999;
-        }
-        @media only screen and (max-width: 940px) {
-            ol {
-                left: -27px;
-            }
-        }
-        li:last-child {
-            border-right: none;
-            margin: 0;
-        }
-        li a {
-            display: block;
-            color: #000;
-            text-align: center;
-            padding: 10px 15px;
-            text-decoration: none;
-            margin: 0;
-            font-size: 17px;
-        }
-        @media only screen and (max-width: 940px) {
-            li a {
-                font-size: 10px;
-            }
-        }
-        li a:hover {
-            color: #ffffff;
-            margin: 0;
-        }
         .kutular {
             width: 35px;
             height: 35px;
             font-size: 25px;
-            background-color: #ffffff; /* Örnek bir renk */
             margin: 5px; /* Kutular arasında boşluk bırakmak için */
             display: block; /* Kutuların yan yana gelmesini sağlar */
-            color: #000000;
+            color: #2f2e2e;
             text-align: center;
             border-radius: 25px;
             cursor: pointer;
             table-layout:auto;
-        }
-        .marka {
-            width: 220px;
-            height: 35px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            font-size: 30px;
-            padding: 2px;
-            background-color: #ff5700; /* Örnek bir renk */
-            display: block; /* Kutuların yan yana gelmesini sağlar */
-            color: #2f2e2e;
-            text-align: center;
-            margin-left: 50px;
-            border-bottom-left-radius: 25px;
-            border-bottom-right-radius: 25px;
-            cursor: pointer;
-            z-index: 999;
-        }
-        @media only screen and (max-width: 940px) {
-            .marka {
-                left: 50%;
-                transform: translate(-65%, 0);
-            }
         }
         .kutularContainer {
             display: flex;
@@ -161,283 +38,191 @@
             }
         }
         .kutular:hover {
-            background-color: #ffffff; /* Fare üzerine gelindiğinde arka plan rengini değiştir */
             color: #ffffff;
             cursor: pointer;
             scale: 1.1;
-        }
-        .bolum {
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0);
-            width: 1250px;
-            position: relative;
-            top: 50px;
-            left: 50%;
-            transform: translate(-50%, 0);
-            padding-bottom: 55px;
-        }
-        @media only screen and (max-width: 940px) {
-            .bolum {
-                width: 800px;
-                max-width: 400px;
-                height: auto;
-                left: 50%;
-                overflow-y: hidden;
-                transform: translate(-50%, 0%);
-            }
         }
         .telif {
             color: white;
             position: fixed;
             bottom: 3px;
             left: 3px;
-            width: 250px;
+            width: 300px;
         }
         @media only screen and (max-width: 940px) {
             .telif {
                 bottom: 2px;
                 left: 50%;
                 transform: translate(-50%, 0);
+                width: 350px;
+                text-align: center;
             }
         }
-        .projeler {
-            margin: 5px; /* Kutular arasında boşluk bırakmak için */
-            display: block; /* Kutuların yan yana gelmesini sağlar */
-            width: 300px;
-            height: 300px;
-            position: relative;
-            background: white;
-            border-radius: 25px;
-            overflow: hidden;
-            border:rgba(0, 0, 0, 0) solid ;
-        }
-        .projeler:hover {
-            border: #ff5700 solid;
-            border-radius: 25px;
-            cursor: pointer;
+        .p-0 {
+            margin-top: 60px;
         }
         @media only screen and (max-width: 940px) {
-            .projeler {
-                width: 50%;
-                height: 300px;
-                left: 100%;
-                transform: translate(-50%, 20%);
+            .p-0 {
+                margin-top: 0;
             }
-        }
-        .projeFotos{
-            width: 300px;
-            height: 215px;
-            font-size: 25px;
-            margin: 0; /* Kutular arasında boşluk bırakmak için */
-            display: block; /* Kutuların yan yana gelmesini sağlar */
-            color: #2f2e2e;
-            text-align: center;
-            border-radius: 25px;
-            cursor: pointer;
-        }
-        .projelerContainer {
-            display: flex;
-            flex-direction: row; /* Kutuları yatay yönde konumlandır */
-        }        
-        @media only screen and (max-width: 940px) {
-            .projelerContainer {
-                flex-direction: column;
-                left: 100%;
-                transform: translate(-50%, 0%);
-            }
-        }
-        .projeBaslık {
-            text-align: center;
-            justify-items: center;
-            align-items: center;
         }
     </style>
     <script>
-        function instagram() {
-            window.open('https://www.instagram.com/farmmodstv/', '_blank');
-        }
         function facebook() {
-            window.open('https://www.facebook.com/farmmodstv/', '_blank');
+            window.open("https://www.facebook.com/farmmodstv", "_blank");
+        }
+        function instagram() {
+            window.open("https://www.instagram.com/farmmodstv", "_blank");
         }
         function youtube() {
-            window.open('https://www.youtube.com/channel/UCZH3Gg1BfzzAwvSLj7ehGKw', '_blank');
-        }
-        function home() {
-            window.open('./', '_self');
-        }
-        function anthem() {
-            window.open('https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=278941&title=fs2022', '_blank');
-        }
-        function pinnacle() {
-            window.open('https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=261452&title=fs2022', '_blank');
-        }
-        function pickup() {
-            window.open('\projects/86_Pickup_Revolution.html', '_self');
-        }
-        function police() {
-            window.open('https://www.farming-simulator.com/mod.php?lang=en&country=cz&mod_id=260176&title=fs2022', '_blank');
-        }
-        function servicepack() {
-            window.open('https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=271482&title=fs2022', '_blank');
-        }
-        function vtdrive() {
-            window.open('https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=263466&title=fs2022', '_blank');
-        }
-        function decoratives() {
-            window.open('https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=278641&title=fs2022', '_blank');
-        }
-        function transmitter() {
-            window.open('https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=277460&title=fs2022', '_blank');
-        }
-        function mantanker() {
-            window.open('https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=279086&title=fs2022', '_blank');
-        }
-        function placelight() {
-            window.open('https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=275031&title=fs2022', '_blank');
-        }
-    </script>
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "https://www.farmmodstv.net/projects",
-            "url": "https://www.farmmodstv.net/projects",
-            "name": "Projects | Farm Mods TV",
-            "description": "New Mods & New Updates"
+            window.open("https://www.youtube.com/channel/UC9Z9Z1Q1JZ1J7Zz9J1Z9Z1Q", "_blank");
         }
     </script>
 </head>
-<body>
-    <ol>
-        <ul>
-            <li><a class="buSayfa" href="./projects">Mods</a></li>
-            <li><a href="mailto:farmmodstv@gmail.com">Contact</a></li>
-            <li><a href="./modStatesList">Mod States List</a></li>
-            <li><a href="./bugRepairList">Bug Repair List</a></li>
-            <li><a href="./my-modhub-pages">ModHub</a></li>
-        </ul>
-    </ol>
-    <div class="marka" onclick="home()">Farm Mods TV</div>
-    <div class="bolum">
-        <div class="projelerContainer" id="ilkModlar">
-            <div class="projeler" onclick="anthem()" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
-                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/screenshot4.jpg'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">Anthem 6x4 Pack</div>
-                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">FS22 Mod</div>
-            </div>
-            <div class="projeler" onclick="pinnacle()" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
-                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/screenshot_pinnacle.jpg'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">Pinnacle 6x4 Tanker</div>
-                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">FS22 Mod</div>
-            </div>
-            <div class="projeler" onclick="pickup()" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
-                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/screenshot_1.jpg'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">'86 Pickup Revolution</div>
-                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">FS22 Mod</div>
-            </div>
-            <div class="projeler" onclick="police()" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
-                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/screenshotPolice.jpg'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">2017 Pickup Police</div>
-                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">FS22 Mod</div>
-            </div>
-        </div>
-        <div class="projelerContainer" id="ilkModlar2">
-            <div class="projeler" onclick="servicepack()" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
-                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/screenshot0.jpg'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Service Vehicles Pack</div>
-                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">FS22 Mod</div>
-            </div>
-            <div class="projeler" onclick="vtdrive()" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
-                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/screenshot1.jpg'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">X7 VT-Drive Track</div>
-                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">FS22 Mod</div>
-            </div>
-            <div class="projeler" onclick="decoratives()" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
-                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/screenshot_decoratives.jpg'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Placeable Decoratives</div>
-                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">FS22 Mod</div>
-            </div>
-            <div class="projeler" onclick="transmitter()" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
-                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/screenshot_transmitter.jpg'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Transmitter Towers</div>
-                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">FS22 Mod</div>
-            </div>
-        </div>
-        <div class="projelerContainer" id="ikinciModlar">
-            <div class="projeler" onclick="mantanker()">
-                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/screenshot_mantanker.jpg'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">Man Agro-Truck Pack</div>
-                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">FS22 Mod</div>
-            </div>
-            <div class="projeler" onclick="placelight()">
-                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/screenshot_placelight.jpg'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 29px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">Placeable Traffic Light</div>
-                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">FS22 Mod</div>
-            </div>
-            <div class="projeler" onclick="pickup()"  >
-                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/FARM MODS TV (1).png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">'86 Pickup Revolution</div>
-                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">FS22 Mod</div>
-            </div>
-            <div class="projeler" onclick="police()">
-                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/FARM MODS TV (1).png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">2017 Pickup Police</div>
-                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 300; word-wrap: break-word">FS22 Mod</div>
-            </div>
-        </div>
-        <div class="projelerContainer" id="ikinciModlar2">
-            <div class="projeler" onclick="servicepack()" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
-                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/FARM MODS TV (1).png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Service Vehicles Pack</div>
-                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">FS22 Mod</div>
-            </div>
-            <div class="projeler" onclick="vtdrive()" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
-                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('genelFotolar/FARM MODS TV (1).png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 30px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">X7 VT-Drive Track</div>
-                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 15px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">FS22 Mod</div>
-            </div>
-            <div class="projeler" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
-                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Name 3</div>
-                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Type</div>
-            </div>
-            <div class="projeler" style="width: 300px; height: 300px; position: relative; background: white; border-radius: 25px; overflow: hidden">
-                <div style="width: 300px; height: 300px; left: 0; top: 0; position: absolute; background: #2F2E2E; border-radius: 25px"></div>
-                <div class="projeFotos" style="width: 300px; height: 215px; left: 0; top: 0; position: absolute; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('https://i.ibb.co/y0hnPTn/FARM-MODS-TV-1.png'); background-size: cover; background-position: center;; border-top-left-radius: 25px; border-top-right-radius: 25px"></div>
-                <div class="projeBaslık" style="left: 22px; top: 218px; position: absolute; color: white; font-size: 40px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Name 4</div>
-                <div class="projeType" style="left: 22px; top: 266px; position: absolute; color: white; font-size: 12px; font-family: 'Inter', serif; font-weight: 400; word-wrap: break-word">Project Type</div>
-            </div>
+
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="57">
+<nav class="navbar navbar-expand-lg fixed-top navbar-light" id="mainNav" style="background: rgba(0, 0, 0, 0.5);">
+    <div class="container"><a class="navbar-brand" href="./">Farm Mods TV</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-align-justify"></i></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive" style="margin-right: 24px;padding-right: 0;">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="./projects">mods</a></li>
+                <li class="nav-item"><a class="nav-link" href="mailto:farmmodstv@gmail.com">contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="./mod-states">Mod states list</a></li>
+                <li class="nav-item"><a class="nav-link" href="./bug-repair">bug repaır list</a></li>
+                <li class="nav-item"><a class="nav-link" href="./my-modhub-pages">modhub</a></li>
+            </ul>
         </div>
     </div>
-    <footer>
-        <div class="telif">
-            Farm Mods TV&trade;, Official Website
+</nav>
+<header class="text-center text-white d-flex masthead" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url('assets/img/farm_mods_tv2.jpg'); background-size: cover; /* Resmi bölüm boyutuna sığacak şekilde ayarlama */
+            background-position: center; /* Resmi bölümün ortasına yerleştirme */">
+    <section id="portfolio" class="p-0">
+        <div class="container-fluid p-0" style="padding: -1px;">
+            <div class="row g-0 popup-gallery">
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=278941&title=fs2022" target="_blank"><img class="img-fluid" src="genelFotolar/screenshot4.jpg">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded"><span>FS22 Mod</span></div>
+                            <div class="project-name"><span>Anthem 6x4 Pack</span></div>
+                        </div>
+                    </div>
+                </a></div>
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="https://www.farming-simulator.com/mod.php?lang=en&country=cz&mod_id=260176&title=fs2022" target="_blank"><img class="img-fluid" src="genelFotolar/screenshotPolice.jpg">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded"><span>FS22 Mod</span></div>
+                            <div class="project-name"><span>2017 Pickup Emergency Edition</span></div>
+                        </div>
+                    </div>
+                </a></div>
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=271482&title=fs2022" target="_blank"><img class="img-fluid" src="genelFotolar/screenshot0.jpg">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded"><span>FS22</span></div>
+                            <div class="project-name"><span>Service Vehicles Pack</span></div>
+                        </div>
+                    </div>
+                </a></div>
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=279086&title=fs2022" target="_blank"><img class="img-fluid" src="genelFotolar/screenshot_mantanker.jpg">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded"><span>FS22</span></div>
+                            <div class="project-name"><span>Man Agro-Truck Pack</span></div>
+                        </div>
+                    </div>
+                </a></div>
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=261452&title=fs2022" target="_blank"><img class="img-fluid" src="genelFotolar/screenshot_pinnacle.jpg">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded"><span>FS22</span></div>
+                            <div class="project-name"><span>Pinnacle 6x4 Tanker</span></div>
+                        </div>
+                    </div>
+                </a></div>
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=275288&title=fs2022" target="_blank"><img class="img-fluid" src="genelFotolar/screenshot_tatra.jpg">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded"><span>FS22</span></div>
+                            <div class="project-name"><span>Phoenix Flatbed/Salt Truck</span></div>
+                        </div>
+                    </div>
+                </a></div>
+            </div>
         </div>
-        <div class="kutularContainer">
-            <div class="kutular" onclick="facebook()"><img src="genelFotolar/facebook.png" alt="Açıklama metni" width="35px" height="35px"></div>
-            <div class="kutular" onclick="instagram()"><img src="genelFotolar/instagram.png" alt="Açıklama metni" width="35px" height="35px"></div>            
-            <div class="kutular" onclick="youtube()"><img src="genelFotolar/youtube.png" alt="Açıklama metni" width="50px" height="35px"></div>
+        <div class="container-fluid p-0">
+            <div class="row g-0 popup-gallery">
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=275031&title=fs2022" target="_blank"><img class="img-fluid" src="genelFotolar/screenshot_placelight.jpg">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded"><span>FS22</span></div>
+                            <div class="project-name"><span>Placeable Traffic Light</span></div>
+                        </div>
+                    </div>
+                </a></div>
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=271873&title=fs2022" target="_blank"><img class="img-fluid" src="genelFotolar/screenshot_mobile.jpg">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded"><span>FS22</span></div>
+                            <div class="project-name"><span>Mobile Traffic Light (Functional)</span></div>
+                        </div>
+                    </div>
+                </a></div>
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=263466&title=fs2022" target="_blank"><img class="img-fluid" src="genelFotolar/screenshot1.jpg">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded"><span>FS22</span></div>
+                            <div class="project-name"><span>X7 VT-Drive Track</span></div>
+                        </div>
+                    </div>
+                </a></div>
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=278641&title=fs2022" target="_blank"><img class="img-fluid" src="genelFotolar/screenshot_decoratives.jpg">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded"><span>FS22</span></div>
+                            <div class="project-name"><span>Placeable Decoratives Pack</span></div>
+                        </div>
+                    </div>
+                </a></div>
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=277460&title=fs2022" target="_blank"><img class="img-fluid" src="genelFotolar/screenshot_transmitter.jpg">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded"><span>FS22</span></div>
+                            <div class="project-name"><span>Transmitter Tower Pack</span></div>
+                        </div>
+                    </div>
+                </a></div>
+                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="https://www.farming-simulator.com/mod.php?lang=en&country=us&mod_id=275272&title=fs2022" target="_blank"><img class="img-fluid" src="genelFotolar/screenshot_boxes.jpg">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded"><span>FS22</span></div>
+                            <div class="project-name"><span>Placeable Newspaper Boxes</span></div>
+                        </div>
+                    </div>
+                </a></div>
+            </div>
         </div>
-    </footer>
-    <script data-name="BMC-Widget" data-cfasync="false"
-            src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="fmtv"
-            data-description="Support me on Buy me a coffee!" data-message=""
-            data-color="#FF5700" data-position="Right" data-x_margin="10" data-y_margin="10"
-            data-width="300px" data-height="300px" data-scale="1">
-    </script>
+    </section>
+</header>
+    
+<footer>
+    <div class="telif">
+        Farm Mods TV&trade;, Official Website
+    </div>
+    <div class="kutularContainer">
+        <div class="kutular" onclick="facebook()"><img src="genelFotolar/facebook.png" alt="Farm Mods TV Facebook" width="35px" height="35px"></div>
+        <div class="kutular" onclick="instagram()"><img src="genelFotolar/instagram.png" alt="Farm Mods TV Instagram" width="35px" height="35px"></div>
+        <div class="kutular" onclick="youtube()"><img src="genelFotolar/youtube.png" alt="Farm Mods TV Youtube" width="50px" height="35px"></div>
+    </div>
+</footer>
+<script src="assets/js/ana.js"></script>
+<script src="assets/js/ana2.js"></script>
+<script src="assets/js/ana3.js"></script>
+<script data-name="BMC-Widget" data-cfasync="false"
+        src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="fmtv"
+        data-description="Support me on Buy me a coffee!" data-message=""
+        data-color="#FF5700" data-position="Right" data-x_margin="8" data-y_margin="8"
+        data-width="300px" data-height="300px" data-scale="1">
+</script>
 </body>
+
 </html>
