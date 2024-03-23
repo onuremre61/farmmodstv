@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Mod States List - Farm Mods TV</title>
+    <link rel="icon" href="genelFotolar/favicon.png" type="image/x-icon" style="border-radius: 25px">
+    <link rel="stylesheet" href="assets/css/ana.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/ana3.css">
+    <link rel="stylesheet" href="assets/css/ana2.css">
+    <style>
+        .kutular {
+            width: 35px;
+            height: 35px;
+            font-size: 25px;
+            margin: 5px; /* Kutular arasında boşluk bırakmak için */
+            display: block; /* Kutuların yan yana gelmesini sağlar */
+            color: #2f2e2e;
+            text-align: center;
+            border-radius: 25px;
+            cursor: pointer;
+            table-layout:auto;
+        }
+        .kutularContainer {
+            display: flex;
+            float: right;
+            flex-direction: row; /* Kutuları yatay yönde konumlandır */
+            position: fixed;
+            bottom: 15px;
+            right: 90px;
+        }
+        @media only screen and (max-width: 940px) {
+            .kutularContainer {
+                left: 3px;
+            }
+        }
+        .kutular:hover {
+            color: #ffffff;
+            cursor: pointer;
+            scale: 1.1;
+        }
+        .telif {
+            color: white;
+            position: fixed;
+            bottom: 3px;
+            left: 3px;
+            width: 250px;
+        }
+        @media only screen and (max-width: 940px) {
+            .telif {
+                bottom: 2px;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+        }
+    </style>
+    <script>
+        function facebook() {
+            window.open("https://www.facebook.com/farmmodstv", "_blank");
+        }
+        function instagram() {
+            window.open("https://www.instagram.com/farmmodstv", "_blank");
+        }
+        function youtube() {
+            window.open("https://www.youtube.com/channel/UC9Z9Z1Q1JZ1J7Zz9J1Z9Z1Q", "_blank");
+        }
+    </script>
+</head>
+
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="57">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light" id="mainNav" style="background: rgba(0, 0, 0, 0.5);">
+        <div class="container"><a class="navbar-brand" href="./">Farm Mods TV</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-align-justify"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive" style="margin-right: 24px;padding-right: 0;">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="./projects">mods</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mailto:farmmodstv@gmail.com">contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./mod-states">Mod states list</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./bug-repair">bug repaır list</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./my-modhub-pages">modhub</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="text-center text-white d-flex masthead" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url('assets/img/farm_mods_tv2.jpg'); background-size: cover; /* Resmi bölüm boyutuna sığacak şekilde ayarlama */
+            background-position: center; /* Resmi bölümün ortasına yerleştirme */">
+        <div class="container my-auto">
+            <div class="row">
+                <iframe class="usttanBosluk" style="height: 550px;" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRScN9fbWeSQBOS8l34BiAfw13cFE97dHaTfPhQb5EQqRrjyIQf4_CL56QvCZ2Bnv_ZH91tEnvXEi_Q/pubhtml?gid=0&amp;single=true"></iframe>
+            </div>
+        </div>
+    </header>
+    <footer>
+        <div class="telif">
+            Farm Mods TV&trade;, Official Website
+        </div>
+        <div class="kutularContainer">
+            <div class="kutular" onclick="facebook()"><img src="genelFotolar/facebook.png" alt="Farm Mods TV Facebook" width="35px" height="35px"></div>
+            <div class="kutular" onclick="instagram()"><img src="genelFotolar/instagram.png" alt="Farm Mods TV Instagram" width="35px" height="35px"></div>
+            <div class="kutular" onclick="youtube()"><img src="genelFotolar/youtube.png" alt="Farm Mods TV Youtube" width="50px" height="35px"></div>
+        </div>
+    </footer>
+    <script src="assets/js/ana.js"></script>
+    <script src="assets/js/ana2.js"></script>
+    <script src="assets/js/ana3.js"></script>
+    <script data-name="BMC-Widget" data-cfasync="false"
+            src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="fmtv"
+            data-description="Support me on Buy me a coffee!" data-message=""
+            data-color="#FF5700" data-position="Right" data-x_margin="8" data-y_margin="8"
+            data-width="300px" data-height="300px" data-scale="1">
+    </script>
+</body>
+
+</html>
