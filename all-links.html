@@ -1,265 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-bs-theme="light" lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Official Farm Mods TV Website. Discover new mods and updates.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="og:title" content="Farm Mods TV">
-    <title id="page-title">All Links | Farm Mods TV</title>
-    <link rel="icon" href="genelFotolar/favicon.png" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>All Links - Farm Mods TV</title>
+    <link rel="icon" href="genelFotolar/favicon.png" type="image/x-icon" style="border-radius: 25px">
+    <link rel="stylesheet" href="assets/css/ana.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/ana3.css">
+    <link rel="stylesheet" href="assets/css/ana2.css">
     <style>
         body {
-            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url('genelFotolar/FARM MODS TV (1).png'); /* Arka plan resmi belirtme */
-            background-size: cover; /* Resmi bölüm boyutuna sığacak şekilde ayarlama */
-            background-position: center; /* Resmi bölümün ortasına yerleştirme */
-        }
-        @media only screen and (max-width: 940px) {
-            body, html {
-                overflow-x: hidden;
-            }
-        }
-        body::-webkit-scrollbar {
-            width: 10px; /* Genişlik */
-        }
-        body::-webkit-scrollbar-thumb {
-            background-color: #ff5700;
-            border-radius: 6px; /* Kenar yarıçapı */
-        }
-        body::-webkit-scrollbar-track {
-            background-color: #2f2e2e; /* Kaydırma çubuğu yolu rengi */
-        }
-        ul {
-            position: fixed;
-            list-style-type: none;
-            font-size: 30px;
-            left: 50%;
-            top: 55vh;
-            margin: 2%;
-            padding: 2%;
-            width: auto;
-            min-width: 100px;
-            max-width: 950px;
-            overflow: hidden;
-            border-radius: 25px;
-            background-color: #ff5700;
-            transform: translate(-50%, -50%);
-            box-shadow: 0 0 50px 0 #ff5700;
-        }
-
-        @media only screen and (max-width: 940px) {
-            ul {
-                width: 100%;
-                max-width: 600px;
-                margin-top: 50px;
-                margin-right: auto;
-                margin-left: auto;
-                left: 50%;
-                right: 50%;
-                top: clamp(15vh, 55%, 55vh);
-                align-items: center;
-                text-align: center;
-                padding: 2%;
-            }
-        }
-
-        @media only screen and (max-width: 420px) {
-            ul {
-                width: 100%;
-                max-width: 380px;
-                margin-top: 50px;
-                margin-right: auto;
-                margin-left: auto;
-                left: 50%;
-                right: 50%;
-                top: clamp(15vh, 55%, 55vh);
-                align-items: center;
-                text-align: left;
-                padding: 2%;
-            }
-        }
-
-        ul li {
-            display: block;
-            clear: both; /* Yeni satıra geç */
-            background-color: #2f2e2e;
-            border-radius: 20px;
-            border: 1px solid #ff5700;
-        }
-        ul li:hover {
-            background-color: #ff5700;
-            border: 1px solid #2f2e2e;
-            animation: moveRight 2s ease-in-out infinite alternate;
-        }
-        ul li:last-child {
-            border-right: none;
-            margin: 0;
-        }
-        ul li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 10px 15px;
-            margin: 5px;
-            text-decoration: none;
-            font-size: 30px;
-            font-family: 'Aptos', sans-serif;
-        }
-        ul li a:hover {
-            margin: 4px;        
-        }
-        .marka {
-            width: 260px;
-            height: 40px;
-            position: fixed;
-            top: 4%;
-            left: 52%;
-            font-size: clamp(20px, 50vw, 40px);
-            padding: 4px;
-            background-color: #ff5700; /* Örnek bir renk */
-            display: block; /* Kutuların yan yana gelmesini sağlar */
-            color: #2f2e2e;
-            text-align: center;
-            border-radius: 25px;
-            cursor: pointer;
-            transform: translate(-50%, -50%);
-        }
-        @media only screen and (max-width: 940px) {
-            .marka {
-                position: fixed;
-                top: 4%;
-                left: 52%;
-                transform: translate(-50%, -50%);
-            }
-        }
-        .bolum {
-            padding: 300px;
-            background-color: #f1f1f1;
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0);
-            background-size: cover; /* Resmi bölüm boyutuna sığacak şekilde ayarlama */
-            background-position: center; /* Resmi bölümün ortasına yerleştirme */
-        }
-        .telif {
-            position: fixed;
-            width: 100%;
-            bottom: 5px;
-            left: 50%;
-            transform: translate(-30%, 0);
-            color: white;
-        }
-        .socials {
-            display: flex;
-            position: fixed;
-            list-style-type: none;
-            font-size: 30px;
-            left: 52%;
-            top: 13vh;
-            width: auto;
-            height: auto;
-            max-height: 95px;
-            min-width: 180px;
-            max-width: 950px;
-            overflow: hidden;
-            border-radius: 25px;
-            background-color: #ff5700;
-            transform: translate(-50%, -50%);
-            justify-items: center;
-            text-align: center;
-        }
-        @media only screen and (max-width: 940px) {
-            .socials {
-                margin: 2%;
-                padding: 2%;
-                left: 50%;
-            }
-        }
-        .socialsIcons {
-            width: 35px;
-            height: 35px;
-            margin: 5px 11px;
-        }
-        .socialsIcons:hover {
-            scale: 1.1;
-            cursor: pointer;
+            overflow: auto;
         }
     </style>
-    <script>
-        function home() {
-            window.location.href = "./";
-        }
-    </script>
 </head>
-<body>
-    <div class="socials">
-        <li class="socialsIcons">
-            <a href="https://www.facebook.com/farmmodstv/" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="Facebook">
-                    <g data-name="<Group>" fill="#000000" class="color000000 svgShape">
-                        <path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" d="M21 1.5H3A1.5 1.5 0 0 0 1.5 3v18A1.5 1.5 0 0 0 3 22.5h8.5v-8h-2v-3h2v-2a4 4 0 0 1 4-4h3v3h-3a1 1 0 0 0-1 1v2h4l-.5 3h-3.5v8H21a1.5 1.5 0 0 0 1.5-1.5V3A1.5 1.5 0 0 0 21 1.5Z" data-name="<Path>" class="colorStroke303c42 svgStroke"></path>
-                    </g>
-                </svg>
-                
-            </a>
-        </li>
 
-        <li class="socialsIcons">
-            <a href="https://www.instagram.com/farmmodstv/" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="Instagram">
-                    <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" data-name="<Group>" class="colorStroke303c42 svgStroke">
-                        <rect width="21" height="21" x="1.5" y="1.5" data-name="<Path>" rx="5.48" ry="5.48" class="color000000 svgShape"></rect>
-                        <circle cx="12" cy="12" r="5.5" data-name="<Path>" class="color000000 svgShape"></circle>
-                        <circle cx="18" cy="5" r=".5" data-name="<Path>" class="color000000 svgShape"></circle>
-                    </g>
-                </svg>
-                
-            </a>
-        </li>
-
-        <li class="socialsIcons">
-            <a href="https://www.youtube.com/channel/UCZH3Gg1BfzzAwvSLj7ehGKw" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="Youtube">
-                    <g data-name="Youtube 1" fill="#000000" class="color000000 svgShape">
-                        <g data-name="<Group>" fill="#000000" class="color000000 svgShape">
-                            <g data-name="<Group>" fill="#000000" class="color000000 svgShape">
-                                <path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" d="M9.5 7.5v9l7-4.5-7-4.5z" data-name="<Path>" class="colorStroke303c42 svgStroke"></path>
-                            </g>
-                            <path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" d="M3.13 4.17 5 3.93a56.22 56.22 0 0 1 7-.43h0a56.22 56.22 0 0 1 7 .43l1.9.24a3 3 0 0 1 2.63 3v9.7a3 3 0 0 1-2.63 3l-1.9.24a56.22 56.22 0 0 1-7 .43h0a56.22 56.22 0 0 1-7-.43l-1.9-.24a3 3 0 0 1-2.63-3V7.15a3 3 0 0 1 2.66-2.98Z" data-name="<Path>" class="colorStroke303c42 svgStroke"></path>
-                        </g>
-                    </g>
-                </svg>
-                
-            </a>
-        </li>
-
-        <li class="socialsIcons">
-            <a href="https://www.twitch.tv/farmmodstv" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="Twitch">
-                    <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" data-name="<Group>" class="colorStroke303c42 svgStroke">
-                        <path d="M.5 4.5v16h6v3h2l3-3h6l6-6V.5h-21l-2 4z" data-name="<Path>" class="color000000 svgShape"></path>
-                        <path d="M3.5 2.5v15h5v3l3-3h6l4-4v-11h-18zM9.5 6.5v6M15.5 6.5v6" data-name="<Path>" class="color000000 svgShape"></path>
-                    </g>
-                </svg>
-                
-            </a>
-        </li>
-
-    </div>
-    <ul>
-        <li><a href="./my-modhub-pages" target="_blank">ModHub Pages</a></li>
-        <li><a href="./modStatesList">Mod States List</a></li>
-        <li><a href="./bugRepairList">Bug Repair List</a></li>
-        <li><a href="https://www.kingmods.net/en/profile/farm-mods-tv" target="_blank">KingMods.net Page</a></li>
-        <li><a href="https://www.modhub.us/farming-simulator-2019-mods" target="_blank">ModHub.us Page</a></li>
-        <li><a href="https://mod-network.com/p/onur" target="_blank">Mod-Network Page</a></li>
-        <li><a href="mailto:farmmodstv@gmail.com">Contact</a></li>
-    </ul>
-<div class="marka" onclick="home()">Farm Mods TV</div>
-<div class="bolum">
-</div>
-<footer>
-    <div class="telif">
-        Farm Mods TV&trade;, Official Website
-    </div>
-</footer>
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="57">
+    <header class="text-center text-white d-flex masthead" style="background-image: url('assets/img/farm_mods_tv2.jpg'); margin-bottom: -100px; padding-bottom: 0;">
+        <div class="container my-auto" style="margin-bottom: -55px; padding-bottom: 55px; margin-top: 20px; padding-top: 0px;">
+            <div class="row">
+                <div class="col-lg-10 mx-auto" style="margin-top: -238px; margin-bottom: -100px; padding-right: 0; padding-left: 0; padding-bottom: 184px; padding-top: 132px;">
+                    <h1 class="text-uppercase"><a role="button" href="./" style="text-decoration: none; color: white"><strong>Farm Mods TV</strong></a></h1>
+                    <hr>
+                </div>
+            </div>
+            <div class="col-lg-8 d-flex flex-column justify-content-center mx-auto" style="padding-top: 0;margin-top: -51px;"><a class="btn btn-primary btn-xl" role="button" href="./my-modhub-pages" style="margin: 5px;">modhub pages</a><a class="btn btn-primary btn-xl" role="button" href="./mod-states" style="margin: 5px;">Mod States List</a><a class="btn btn-primary btn-xl" role="button" href="./bug-repair" style="margin: 5px;">bug repair list</a><a class="btn btn-primary btn-xl" role="button" href="https://www.kingmods.net/en/profile/farm-mods-tv" target="_blank" style="margin: 5px;">kıngmods.net page</a><a class="btn btn-primary btn-xl" role="button" href="https://www.modhub.us/user/Farm%20Mods%20TV" target="_blank" style="margin: 5px;">modhub.us page</a><a class="btn btn-primary btn-xl" role="button" href="https://mod-network.com/p/onur" target="_blank" style="margin: 5px;">mod-network page</a><a class="btn btn-primary btn-xl" role="button" href="mailto:farmmodstv@gmail.com" style="margin: 5px;">contact</a></div>
+        </div>
+    </header>
+    <script src="assets/js/ana.js"></script>
+    <script src="assets/js/ana2.js"></script>
+    <script src="assets/js/ana3.js"></script>
 </body>
+
 </html>
