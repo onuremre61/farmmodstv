@@ -1,175 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-bs-theme="light" lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Official Farm Mods TV Website. Discover new mods and updates.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="og:title" content="Farm Mods TV">
-    <title id="page-title">Modhub Pages | Farm Mods TV</title>
-    <link rel="icon" href="genelFotolar/favicon.png" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    <title>ModHub Pages - Farm Mods TV</title>
+    <link rel="icon" href="genelFotolar/favicon.png" type="image/x-icon" style="border-radius: 25px">
+    <link rel="stylesheet" href="assets/css/ana.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/ana3.css">
+    <link rel="stylesheet" href="assets/css/ana2.css">
     <style>
         body {
-            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url('genelFotolar/FARM MODS TV (1).png'); /* Arka plan resmi belirtme */
-            background-size: cover; /* Resmi bölüm boyutuna sığacak şekilde ayarlama */
-            background-position: center; /* Resmi bölümün ortasına yerleştirme */
-        }
-        @media only screen and (max-width: 940px) {
-            body, html {
-                overflow-x: hidden;
-            }
-        }
-        body::-webkit-scrollbar {
-            width: 10px; /* Genişlik */
-        }
-        body::-webkit-scrollbar-thumb {
-            background-color: #ff5700;
-            border-radius: 6px; /* Kenar yarıçapı */
-        }
-        body::-webkit-scrollbar-track {
-            background-color: #2f2e2e; /* Kaydırma çubuğu yolu rengi */
-        }
-        ul {
-            display: block;
-            position: fixed;
-            list-style-type: none;
-            font-size: 30px;
-            left: 50%;
-            top: 55%;
-            margin: 2%;
-            padding: 2%;
-            width: auto;
-            min-width: 100px;
-            max-width: 950px;
-            overflow: hidden;
-            border-radius: 25px;
-            background-color: #ff5700;
-            transform: translate(-50%, -50%);
-        }
-
-        @media only screen and (max-width: 940px) {
-            ul {
-                width: 100%;
-                max-width: 600px;
-                margin-top: 50px;
-                margin-right: auto;
-                margin-left: auto;
-                left: 50%;
-                right: 50%;
-                top: 50%;
-                align-items: center;
-                text-align: center;
-                padding: 2%;
-            }
-        }
-
-        @media only screen and (max-width: 420px) {
-            ul {
-                width: 100%;
-                max-width: 380px;
-                margin-top: 50px;
-                margin-right: auto;
-                margin-left: auto;
-                left: 50%;
-                right: 50%;
-                top: 45%;
-                align-items: center;
-                text-align: left;
-                padding: 2%;
-            }
-        }
-
-        ul li {
-            display: block;
-            clear: both; /* Yeni satıra geç */
-            background-color: #2f2e2e;
-            border-radius: 20px;
-            border: 1px solid #ff5700;
-        }
-        ul li:hover {
-            background-color: #ff5700;
-            border: 1px solid #2f2e2e;
-        }
-        
-        ul li:last-child {
-            border-right: none;
-            margin: 0;
-        }
-
-        ul li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 10px 15px;
-            margin: 5px;
-            text-decoration: none;
-            font-size: 30px;
-            font-family: 'Aptos', sans-serif;
-        }
-
-        ul li a:hover {
-            margin: 4px;        
-        }
-        .marka {
-            width: 260px;
-            height: 40px;
-            position: fixed;
-            top: 4%;
-            left: 52%;
-            font-size: 40px;
-            padding: 4px;
-            background-color: #ff5700; /* Örnek bir renk */
-            display: block; /* Kutuların yan yana gelmesini sağlar */
-            color: #2f2e2e;
-            text-align: center;
-            border-radius: 25px;
-            cursor: pointer;
-            transform: translate(-50%, -50%);
-        }
-        @media only screen and (max-width: 940px) {
-            .marka {
-                position: fixed;
-                top: 4%;
-                left: 52%;
-                margin-right: auto; /* Margin'ı otomatik olarak ayarla */
-                margin-left: auto; /* Margin'ı otomatik olarak ayarla */
-                transform: translate(-50%, -50%);
-            }
-        }
-        .bolum {
-            padding: 300px;
-            background-color: #f1f1f1;
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0);
-            background-size: cover; /* Resmi bölüm boyutuna sığacak şekilde ayarlama */
-            background-position: center; /* Resmi bölümün ortasına yerleştirme */
-        }
-        .telif {
-            position: fixed;
-            width: 100%;
-            bottom: 5px;
-            left: 50%;
-            transform: translate(-30%, 0);
-            color: white;
+            overflow: auto;
         }
     </style>
     <script>
-        function home() {
-            window.location.href = "./";
+        function fs25modhub() {
+            window.open("https://www.farming-simulator.com/mods.php?lang=en&country=us&title=fs2025&filter=org&org_id=229266", "_blank");
+            setTimeout(function(){
+                window.location.href = "./";
+            }, 500);
+        }
+        function fs22modhub() {
+            window.open("https://www.farming-simulator.com/mods.php?lang=en&country=us&title=fs2022&filter=org&org_id=229266", "_blank");
+            setTimeout(function(){
+                window.location.href = "./";
+            }, 500);
         }
     </script>
 </head>
-<body>
-    <ul>        
-        <li><a href="https://www.farming-simulator.com/mods.php?lang=en&country=us&title=fs2025&filter=org&org_id=229266" target="_blank">&#8599;FS25 ModHub</a></li>
-        <li><a href="https://www.farming-simulator.com/mods.php?lang=en&country=us&title=fs2022&filter=org&org_id=229266" target="_blank">&#8599;FS22 ModHub</a></li>
-    </ul>
-<div class="marka" onclick="home()">Farm Mods TV</div>
-<div class="bolum">
-</div>
-<footer>
-    <div class="telif">
-        Farm Mods TV&trade;, Official Website
+
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="57">
+<header class="text-center text-white d-flex masthead" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url('assets/img/farm_mods_tv2.jpg'); background-size: cover; background-position: center; margin-bottom: -100px; padding-bottom: 0; height: 100%">
+    <div class="container my-auto" style="margin-bottom: -55px; padding-bottom: 55px; margin-top: 20px; padding-top: 0;">
+        <div class="row">
+            <div class="col-lg-10 mx-auto" style="margin-top: -238px; margin-bottom: -100px; padding-right: 0; padding-left: 0; padding-bottom: 184px; padding-top: 132px;">
+                <h1 class="text-uppercase"><a role="button" href="./" style="text-decoration: none; color: white"><strong>Farm Mods TV</strong></a></h1>
+                <hr>
+            </div>
+        </div>
+        <div class="col-lg-8 d-flex flex-column justify-content-center mx-auto" style="padding-top: 0;margin-top: -51px;"><a onclick="fs25modhub()" class="btn btn-primary btn-xl" role="button"  style="margin: 5px;">fs25 ModHub</a><a onclick="fs22modhub()" class="btn btn-primary btn-xl" role="button"  style="margin: 5px;">fs22 modhub</a></div>
     </div>
-</footer>
+</header>
+<script src="assets/js/ana.js"></script>
+<script src="assets/js/ana2.js"></script>
+<script src="assets/js/ana3.js"></script>
 </body>
+
 </html>
